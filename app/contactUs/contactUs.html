@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style type="text/css">
+  #contactUsMap{
+     border:0;
+     width:100vw;
+     height:30vh;
+  }
+
+  .input_border{
+    border-radius: 5px;
+  }
+
+  .padddingB10{
+    padding-bottom:10px;
+  }
+
+  .contactUsAddress{
+    font-family:'Muli';
+    padding-left:120px;
+    padding-bottom:50px;
+  }
+
+  #messageHead{
+    font-size:1.7em;
+    display:none;
+    font-family: 'Muli';
+  }
+  /*Media Queries Start*/
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    #contactUsMap{
+       border:0;
+       width:100vw;
+       height:50vh;
+    }
+
+    .contactUsAddress{
+      font-family:'Muli';
+      padding-left:10px;
+      padding-bottom:20px;
+    }
+    #messageHead{
+      font-size:1.7em;
+      display:block;
+      padding:0px 0px 0px 40px;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+  <iframe id="contactUsMap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15563.857777675268!2d77.7239959!3d12.7808199!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc30827bf73afb4d1!2sSipani+Bliss+Phase+1%262!5e0!3m2!1sen!2sin!4v1527853108734" frameborder="0" allowfullscreen></iframe>
+
+  <div class="uk-container" style="margin-top:50px;">
+    <div uk-grid>
+      <div class="uk-width-1-1 uk-width-1-2@s">
+        <table class="contactUsAddress">
+          <tr><td style="font-size:2.3em;">Contact Us <hr class="uk-divider-small"> </td></tr>
+          <tr><td style="font-size:1.1em;color:#212121;padding-bottom:5px;">ADDRESS:</td></tr>
+          <tr><td style="font-size:0.85em;">D404, Sipani Bliss Phase - 1,<br>
+                  Chandapura, Bengaluru 560099</td></tr>
+          <tr><td style="font-size:1.1em;color:#212121;padding:15px 0px 5px  0px;">PHONE:</td></tr>
+          <tr><td style="font-size:0.85em;">+91 96 00 255848<br>+91 99 52 551499</td></tr>
+        </table>
+      </div>
+
+      <div id="messageHead">Send Message <hr class="uk-divider-small"> </div>
+      <div class="uk-width-1-1 uk-width-1-2@s">
+        <form class="uk-grid-small" uk-grid style="margin-top:0px;font-family:'Muli'">
+          <div class="uk-width-1-2@s padddingB10">
+              <input class="uk-input input_border" type="text" ng-model="message.name" id="message_name"  placeholder="Name" required>
+          </div>
+          <div class="uk-width-1-2@s padddingB10">
+              <input class="uk-input input_border" type="number" id="message_phone"  min="6000000000" max="9999999999" step="1" ng-model="message.phone" placeholder="Mobile No." required>
+          </div>
+          <div class="uk-width-1-1 padddingB10">
+              <input class="uk-input input_border" type="email" id="message_email"  ng-model="message.email" placeholder="Email" required>
+          </div>
+          <div class="uk-width-1-1 padddingB10">
+            <textarea class="uk-textarea" rows="3" ng-model="message.text" id="message_text"  placeholder="Your message goes here..." required></textarea>
+          </div>
+          <div class="uk-width-1-1 padddingB10">
+            <button class="uk-button uk-button-default" ng-click="submitForm()" style="padding:1px 20px;margin-top:-5px;font-weight:bold" >Send</button>
+          </div>
+ 
+      </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

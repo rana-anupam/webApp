@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style type="text/css">
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+#tenureSelector{
+  text-align: left
+}
+
+#productName{
+  font-weight:bolder;
+  font-size: 1.6em;
+  color:#2d51a3;
+}
+
+#tenureRatesHeading{
+  color:#2d51a3;
+  margin-top:10px;
+  font-weight: bolder;
+}
+
+.tenureRates{
+  text-align: center;
+  padding: 19px;
+  max-height: 90px;
+  background-color: #fff;
+  color:#2d51a3;
+  cursor:pointer;
+}
+
+.tenureRates:hover{
+  background-color: #2d51a3;
+  color:#fff;
+}
+
+.tenureRatesMonths{
+  font-size:0.8em;
+}
+
+
+.tenureRatesPrices{
+  font-size:0.9em;
+  font-weight:bolder;
+}
+
+.addToCart{
+  font-size: 1em;
+}
+
+.rentNow{
+  width:105%;
+  font-size: 1.05em;
+}
+
+
+#productDetails a{
+  font-size:1.2em;
+}
+
+
+#frequentQueries a{
+  font-size:1.2em;
+}
+
+#desktopView{
+  display: block;
+  margin-top: 10px;
+}
+
+#mobileView{
+  display: none;
+}
+
+.packageActive{
+  color:#fff;
+  background-color:#2d51a3;
+}
+
+.tenureRateSelector ul li {
+  color:#1e87f0;
+  font-size: 1em;
+  letter-spacing:1px;
+  font-family:'Muli';
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.tenureRateSelector ul li:hover .db{
+  color:#2d51a3;
+}
+
+.db{
+  color:#aaa;
+}
+
+#addonContainer ul li button{
+  background-color:#2d51a3;
+  color:#fff;
+  margin-top:10px;
+  padding:1px 20px;
+  border:0px solid red;
+  border-radius: 10px; 
+}
+
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    #desktopSubNav{
+      display: none;
+    }
+
+    #mobileSubNav{
+      display: block;
+    }
+
+
+    #productName{
+      font-size: 1.2em;
+    }
+
+    .tenureRates{
+      padding: 5px;
+      max-height: 70px;
+    }
+
+    .tenureRatesMonths{
+      font-size:0.6em;
+    }
+
+
+    .tenureRatesPrices{
+      font-size:0.7em;
+      font-weight:bolder;
+    }
+
+    #tenureRatesHeading{
+      margin-top:15px;
+    }
+
+    .addToCart{
+      padding-right: 15px;
+      font-size: 0.9em;
+      padding-left: 15px;
+    }
+
+    .rentNow{
+      padding-right: 15px;
+      font-size: 1em;
+      padding-left: 15px;
+    }
+
+    #productDetails a{
+      font-size:0.8em;
+    }
+
+    #productDetails{
+      padding: 0px;
+      padding-left: 15px;
+    }
+
+    #frequentQueries{
+      padding: 0px;    
+    }
+
+    #frequentQueries a{
+      font-size:0.8em;    
+    }
+
+    #desktopView{
+      display: none;
+    }
+
+    #mobileView{
+      display: block;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+</style>
+</head>
+
+<body>
+
+
+<!-- 
+************************************************************************
+****************************** Desktop Website Starts ********************
+ -->
+
+<div id="desktopView">
+
+<div class="uk-container uk-margin">
+  <div uk-grid>
+
+    <div class="uk-width-1-1 uk-width-3-5@s">
+      <img class="bannerImage" src="app/single_products/magnumQueenBedroom/magnumQueenBedroom_prime.jpg">
+
+<!-- *** Desktop Product Details and FAQ starts -->
+  <div style="margin-top:10px">
+      <ul uk-tab style="width: 100%">
+          <li id="productDetails" style="width:45%"><a href="#"  style="color:#2d51a3;">Product Details</a></li>
+          <li id="frequentQueries" style="width:49%"><a href="#"  style="color:#2d51a3">Frequent Queries</a></li>
+      </ul>
+
+      <ul class="uk-switcher uk-margin">
+          <li>
+            <p style="font-size: 1.4em;font-family:'Muli';color:#212121;font-weight: bold">Products Included: <span style="font-size:0.75em;padding:4px;font-weight:normal;">( {{itemsIncluded}} )</span></p>
+            <hr class="uk-divider-small">
+
+         
+          <div uk-grid ng-if="isBasic || isValue || isPrime">
+            <div class="uk-width-1-2">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/79z3mtnk-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2f3c3hj0-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/48ikp2ag-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-2">
+              <p style="color:#212121;font-size: 1.1em">Poise Queen Bed  <span style="font-size:0.65em;color:#fff;background:#2d51a3;padding:4px;">Core Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">Comfort and compactness, get them both with the Poise queen bed. The bed's strong metal frame ensures durability while the honey-toned solid wood adds both style and comfort to the mix.</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>76"L x 62"B x 17"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>Metal bodied bed</li>
+                        <li>Solid wood headboard</li>
+                        <li>Durable coating to prevent rust</li>
+                        <li>Honey finish</li>
+                        <li>To fit Mattress Size: 72" L x 60" B</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+
+          <hr> 
+
+          <div uk-grid ng-if="isValue || isPrime">
+            <div class="uk-width-1-2">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/jlg7jeo3-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2yxyoxej-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/zt0ixo8w-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-2">
+              <p style="color:#212121;font-size: 1.1em">Queen Mattress - Foam  <span style="font-size:0.65em;color:#fff;background:#1e87f0;padding:4px;">Addon Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">We know you hate the cluttered clothes across your chair. The Magnum 2-door wardrobe can ease your worries. The shelf space alone can intimidate your space into tidying up!</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>28"L x 18"B x 71"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>8 shelf configuration Lockable</li>
+                        <li>Hanger rod installed</li>
+                        <li>2 door configuration</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+
+          <div uk-grid ng-if="isValue || isPrime">
+            <div class="uk-width-1-2">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/jlg7jeo3-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2yxyoxej-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/zt0ixo8w-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-2">
+              <p style="color:#212121;font-size: 1.1em">Set of 2 - Fibre Pillow  <span style="font-size:0.65em;color:#fff;background:#1e87f0;padding:4px;">Addon Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">We know you hate the cluttered clothes across your chair. The Magnum 2-door wardrobe can ease your worries. The shelf space alone can intimidate your space into tidying up!</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>28"L x 18"B x 71"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>8 shelf configuration Lockable</li>
+                        <li>Hanger rod installed</li>
+                        <li>2 door configuration</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+
+          <div uk-grid ng-if="isPrime">
+            <div class="uk-width-1-2">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/jlg7jeo3-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2yxyoxej-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/zt0ixo8w-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-2">
+              <p style="color:#212121;font-size: 1.1em">Green Wedge fitted bedsheet and pillow cover  <span style="font-size:0.65em;color:#fff;background:#1e87f0;padding:4px;">Addon Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">We know you hate the cluttered clothes across your chair. The Magnum 2-door wardrobe can ease your worries. The shelf space alone can intimidate your space into tidying up!</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>28"L x 18"B x 71"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>8 shelf configuration Lockable</li>
+                        <li>Hanger rod installed</li>
+                        <li>2 door configuration</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+
+          <div uk-grid ng-if="isPrime">
+            <div class="uk-width-1-2">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/jlg7jeo3-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2yxyoxej-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/zt0ixo8w-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-2">Wingman bedside table  <span style="font-size:0.65em;color:#fff;background:#2d51a3;padding:4px;">Core Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">We know you hate the cluttered clothes across your chair. The Magnum 2-door wardrobe can ease your worries. The shelf space alone can intimidate your space into tidying up!</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>28"L x 18"B x 71"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>8 shelf configuration Lockable</li>
+                        <li>Hanger rod installed</li>
+                        <li>2 door configuration</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+
+          <hr>
+
+          </li>
+          <!-- *** FAQ Starts *** -->
+          <li style="font-family: 'Muli'">
+
+            <span style="font-size:1.05em;font-weight:bold">What is RMI ? How is it different from monthly rentals I pay to Rentomojo ?</span><br>
+            <span style="font-size:0.85em">
+              RMI is a short form for Rentomojo Monthly Installments which are the lease payments that you give monthly for usage of the product for a stipulated time frame. It depends on factors like market value of the product, tenure of service and interest charged.
+              Monthly Rentals are different from RMI as it also incorporates over the top expenses like insurance, maintanence costs etc over and above RMI costs per month.
+            <br>
+              Monthly Rental = RMI + Insurance costs / month + Mainitanence Costs / Month
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Why do you guys compare your service with EMI ?</span><br>
+            <span style="font-size:0.85em">
+              We are firm believers of the fact that long term renting from Rentomojo makes more sense than outright purchase or other forms of buying a product from retail such as EMI. Thats why we compare overall costs with rentomojo with your total costs in the case of EMI for different tenures. Checkout the comparision of costs vs benefits.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">How does rent to own work ?</span><br>
+            <span style="font-size:0.85em">
+              Rent to own is an option to own the product at any time during the tenure or at the end of tenure, by paying a nominal price.The customer needs to complete minimum 12 months tenure to avail this option. For eg if you take a washing machine on 36 months rent, you will keep paying 659 rs every month and at the end of 36 months - you can own the product by paying 4378 rs.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Who rents for 36 months ?</span><br>
+            <span style="font-size:0.85em">
+              36 months is the most preferred tenure due to the following reasons : possibility of shifting is high as an avg consumer today shifts twice in 3 years*. Rentomojo saves you from this burden by providing you free relocation within city or any of the major metro cities*. Not just that ! you end up paying a smaller monthly payout compared to emi, with an option to either own or return the product anytime as per your changing life priorities. Not to mention you can swap every 12 months. Compare costs vs benefits for 36 months to check how financially viable it is !
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Will i be charged any cancellation fee if i return early ?</span><br>
+            <span style="font-size:0.85em">
+              We do take a settlement fee when you close early. Lets us explain how we charge with an example. Say you have taken the products for 12 months and your friend has taken for 6 months. If both of you close at 6 months, you pay only a difference of what your friend has paid for 6 months and what you have paid in those 6 months. Isnt it fair ! check out settlement calculator
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Why are rentals changing with tenure ?</span><br>
+            <span style="font-size:0.85em">
+              Its unfair to charge the same price across tenures as consumers end up paying a lot more than whats fair in cases of longer tenures. so to make it fair for someone who is committing longer, we reduce rentals with tenure similarly to how EMI reduces with tenure.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Is relocation really free ?</span><br>
+            <span style="font-size:0.85em">
+              Intercity relocation and Intracity relocation comes free with our service. We help you relocate to any cities we are present in.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Why do you guys take deposit ?</span><br>
+            <span style="font-size:0.85em">
+              We typically give you products worth a lot more than what we ask for in return as monthly rentals. To safegaurd us with risk of defaults or intential damage, we charge a nominal deposit.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">How soon can i swap my products ?</span><br>
+            <span style="font-size:0.85em">
+              Our products can be swapped every 12 months.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">What all do you cover in free maintanence ?</span><br>
+            <span style="font-size:0.85em">
+              We take care of all manufacturing defects and minor wear and tear. Not only that we end up waving damage upto ₹1000*
+            </span>
+
+
+            
+          </li>
+          <!-- *** FAQ Starts *** -->
+      </ul>
+    </div>
+<!-- *** Desktop Product Details and FAW=Q starts -->
+    </div>
+
+    <div class="uk-width-1-1 uk-width-2-5@s">
+      <div class="uk-card uk-card-default" style="padding: 25px;">
+            <div style="font-size:0.9em ">
+              <span id="productName" >Magnum Queen Bedroom</span><br>
+            Make your plan.
+            <hr>
+            </div>
+
+          <div >
+            Choose your Package:
+          </div>
+
+          <div class="uk-child-width-1-3 uk-grid-small uk-grid-match" uk-grid style="margin-top: 10px">
+              <div>
+                  <div class=" uk-card-default tenureRates basic" ng-click="activePackage('basic')" >
+                    <div>
+                      Basic
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates  value" ng-click="activePackage('value')">
+                    <div>
+                      Value
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates packageActive prime" ng-click="activePackage('prime')" >
+                    <div>
+                      Prime
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <br />
+          <hr>
+
+
+          <div id="tenureRatesHeading" >
+            Tarrif Rates:
+          </div>
+          <div class="uk-child-width-1-3 uk-grid-small uk-grid-match" uk-grid style="margin-top: 10px">
+              <div>
+                  <div class=" uk-card-default tenureRates ">
+                    <div><span class="tenureRatesMonths">1-2 months</span> <br><span class="tenureRatesPrices"><i class="fa fa-inr"></i>{{tarrif_1to2}}/ mo</span>
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates " style="">
+                    <div><span class="tenureRatesMonths">3-9 months</span> <br><span class="tenureRatesPrices"><i class="fa fa-inr"></i>{{tarrif_3to9}}/ mo</span>
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates " style="">
+                    <div><span class="tenureRatesMonths">10+ months</span> <br><span class="tenureRatesPrices"><i class="fa fa-inr"></i>{{tarrif_10plus}}/ mo</span>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+                <table style="width: 100%;border:0px dotted #eeeeee;padding:10px;border:1px solid #eee;margin-top: 15px;">
+                  <tr >
+                    <td style="text-align: left;border:0px solid red;font-size: 0.9em">
+                     Refundable Deposit<br>
+                     <span style="font-size: 0.8em">(To be paid now)</span>
+                    </td>
+                    <td style="text-align: right;border:0px solid red;font-size:0.93em">
+                      <i class="fa fa-inr"></i>500/-
+                    </td>
+                  </tr>
+               </table>
+
+
+          <hr>
+            
+            <span style="color:#2d51a3;font-weight:bolder">Choose your tenure:</span>
+            <div style="text-align: center">
+            <button class="uk-button uk-button-default tenureRateSelectorButton" type="button" style="margin-top: 10px;text-transform: lowercase;">{{selectedTenure}} <span uk-icon="icon: chevron-down; ratio: 1"></span></button>
+
+<div uk-dropdown style="max-height:300px;overflow:scroll;margin-top:10px;margin-left:90px;" class="tenureRateSelector">
+  <ul class="uk-nav uk-dropdown-nav" >
+  <li ng-click="activeTenure(tarrif_1,1)" >Rs.{{tarrif_1}}/mo <span class="db">for</span> 1 month</li>
+  <li ng-click="activeTenure(tarrif_2,2)" >Rs.{{tarrif_2}}/mo <span class="db">for</span> 2 months</li>
+  <li ng-click="activeTenure(tarrif_3,3)" >Rs.{{tarrif_3}}/mo <span class="db">for</span> 3 months</li>
+  <li ng-click="activeTenure(tarrif_4,4)" >Rs.{{tarrif_4}}/mo <span class="db">for</span> 4 months</li>
+  <li ng-click="activeTenure(tarrif_5,5)" >Rs.{{tarrif_5}}/mo <span class="db">for</span> 5 months</li>
+  <li ng-click="activeTenure(tarrif_6,6)" >Rs.{{tarrif_6}}/mo <span class="db">for</span> 6 months</li>
+  <li ng-click="activeTenure(tarrif_7,7)" >Rs.{{tarrif_7}}/mo <span class="db">for</span> 7 months</li>
+  <li ng-click="activeTenure(tarrif_8,8)" >Rs.{{tarrif_8}}/mo <span class="db">for</span> 8 months</li>
+  <li ng-click="activeTenure(tarrif_9,9)" >Rs.{{tarrif_9}}/mo <span class="db">for</span> 9 months</li>
+  <li ng-click="activeTenure(tarrif_10,10)" >Rs.{{tarrif_10}}/mo <span class="db">for</span> 10 months</li>
+  <li ng-click="activeTenure(tarrif_11,11)" >Rs.{{tarrif_11}}/mo <span class="db">for</span> 11 month</li>
+  <li ng-click="activeTenure(tarrif_12,12)" >Rs.{{tarrif_12}}/mo <span class="db">for</span> 12 months</li>
+  <li ng-click="activeTenure(tarrif_13,13)" >Rs.{{tarrif_13}}/mo <span class="db">for</span> 13 months</li>
+  <li ng-click="activeTenure(tarrif_14,14)" >Rs.{{tarrif_14}}/mo <span class="db">for</span> 14 months</li>
+  <li ng-click="activeTenure(tarrif_15,15)" >Rs.{{tarrif_15}}/mo <span class="db">for</span> 15 months</li>
+  <li ng-click="activeTenure(tarrif_16,16)" >Rs.{{tarrif_16}}/mo <span class="db">for</span> 16 months</li>
+  <li ng-click="activeTenure(tarrif_17,17)" >Rs.{{tarrif_17}}/mo <span class="db">for</span> 17 months</li>
+  <li ng-click="activeTenure(tarrif_18,18)" >Rs.{{tarrif_18}}/mo <span class="db">for</span> 18 months</li>
+  </ul>
+</div>
+
+</div>
+            <hr>
+
+            <div uk-grid>
+              <div class="uk-width-1-1">
+                <table style="width: 100%;border:2px dotted #2d51a3;padding:20px">
+                  <tr >
+                    <td style="text-align: left;border:0px solid red;color:#2d51a3;font-weight: bolder">
+                      Monthly Rent:
+                    </td>
+                    <td style="text-align: right;border:0px solid red">
+                      <i class="fa fa-inr"></i>{{orderTarrif}}/-
+                    </td>
+                  </tr>
+               </table>
+              <table style="width: 100%;font-size: 0.85em;margin-top: 3px;">
+                  <tr >
+                    <td style="text-align:left;">
+                      <img src="public/img/delivery_fees_truck.png" style="width:30px;"><i> Free Delievery & setup</i>
+                    </td>
+                    <td style="text-align: right;border:0px solid red">
+                      (1 month = 30 days)
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+
+            <div>
+                <table style="width: 100%;margin-top: 35px;">
+                  <tr >
+                    <td style="text-align: left;">
+                     <button ng-click="submitOrder()" class="uk-button uk-button-default addToCart " >Add to Cart</button>
+                    </td>
+                    <td style="text-align: right;">
+                      <button class="uk-button uk-button-primary rentNow">Rent Now</button>
+                    </td>
+                  </tr>
+               </table>
+              
+            </div>
+
+      </div>
+      <br>
+<!-- Offer Starts -->
+      <div class="uk-card uk-card-default uk-width-1-1@s" style="padding: 25px;font-family:'Muli'">
+          <img src="https://www.guarented.com/images/offers/product_offer.png" style="width:28px;vertical-align: text-bottom;">
+          <span style="color:#2d51a3;font-size:1.4em;font-weight:bold">O</span><span style="color:#2d51a3;font-size:1.1em;font-weight:bold">OFFERS</span>
+          <ul class="uk-list uk-list-bullet" style="font-size:0.9em">
+            <li>Use Code SAVE15 & get 15% Off Per Month for a Minimum Rental Value of Rs 2000. <a>View T&C*</a></li>
+            <li>Use Code SAVE20 to get 20% Off Per Month for a Minimum Rental Value of Rs 4000. <a>View T&C*</a></li>
+            <li>Use Code 1MONTHOFF and get 1st Month's Rent Free. Minimum Tenure is 10+ Months. <a>View T&C*</a></li>
+        </ul>
+      </div>
+<!-- Offer Ends -->
+<br>
+<!-- Similar Product Starts -->
+      <div class="uk-card uk-card-default uk-width-1-1@s" style="padding: 25px;font-family:'Muli'">
+          
+          <span style="color:#2d51a3;font-size:1.1em;font-weight:bold">View Similar Products</span>
+          
+          <div uk-slider="center: true" style="margin-top:20px;">
+
+                <div class="uk-position-relative uk-visible-toggle uk-light">
+
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/cltn-sng-pack/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/elite-cltn-sng-bd/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/elt-bt/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint8/images_03/royal-sbed/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint8/images_03/royal-sbed/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+                </div>
+
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+            </div>
+
+      </div>
+<!-- Similar Product Ends -->
+
+    </div>
+<!-- Right Sidebar ends -->
+  </div>
+</div>
+<hr>
+
+<!-- Add ons start -->
+
+<div class="uk-container">
+  <div style="margin-top: 20px;font-family:'Muli'">
+    <span style="font-size: 1.8em; color:#2d51a3;font-weight: bold">Choose Addons</span><br>
+    Essentials add tiny details to your product enhancing its overall experience
+    <hr class="uk-divider-small">
+  </div>
+
+  <div uk-slider="center: true">
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" id="addonContainer">
+
+        <ul class="uk-slider-items uk-child-width-1-4@s uk-grid">
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/cskodd2n-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Set of 2 - Sheer Curtain <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>30/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table> 
+                          <button class="uk-button uk-button-primary addButton"
+                              ng-click="addAddon(30,100,1801,'Set of 2 - Sheer Curtain','https://p.rmjo.in/productSquare/cskodd2n-300x300.jpg')" 
+                            >Add
+                          </button>                        
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/awabf9kb-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Crimson table lamp Red <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>20/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>    
+                          <button class="uk-button uk-button-primary addButton" 
+                          ng-click="addAddon(30,100,1802,'Crimson table lamp Red','https://p.rmjo.in/productSquare/awabf9kb-300x300.jpg')"
+                          >Add</button>                           
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/0l34fkrj-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Wingman bedside table <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>45/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>      
+                          <button class="uk-button uk-button-primary addButton" 
+                          ng-click="addAddon(30,100,1803,'Wingman bedside table','https://p.rmjo.in/productSquare/0l34fkrj-300x300.jpg')"
+                          >Add</button>                         
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/rmyvugv4-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Green Wedge fitted bedsheet <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>39/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>      
+                          <button class="uk-button uk-button-primary addButton" 
+                          ng-click="addAddon(30,100,1804,'Green Wedge fitted bedsheet','https://p.rmjo.in/productSquare/rmyvugv4-300x300.jpg')"
+                          >Add</button>                         
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/pi04nlbv-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Set of 2 - Fibre Pillow <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Cotton
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>30/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>       
+                          <button class="uk-button uk-button-primary addButton" 
+                          ng-click="addAddon(30,100,1805,'Set of 2 - Fibre Pillow','https://p.rmjo.in/productSquare/pi04nlbv-300x300.jpg')"
+                          >Add</button>                        
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/xtgrb112-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Queen Mattress - Foam <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>30/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>           
+                          <button class="uk-button uk-button-primary addButton" 
+                          ng-click="addAddon(30,100,1806,'Queen Mattress - Foam','https://p.rmjo.in/productSquare/xtgrb112-300x300.jpg')"
+                          >Add</button>                    
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous" style="color:#212121;"></a>
+        <a class="uk-position-center-right uk-position-small " href="#" uk-slidenav-next uk-slider-item="next" style="color:#212121"></a>
+
+    </div>
+
+</div>
+</div>
+
+<!-- Add ons ends -->
+  <hr>
+</div>
+
+
+
+<!-- 
+************************************************************************
+****************************** Desktop Website ends ********************
+ -->
+
+
+<!-- ************************************************************************************************ -->
+
+
+ <!-- 
+************************************************************************
+****************************** Mobile Website Starts ********************
+ -->
+
+<div id="mobileView">
+
+<div class="uk-container uk-margin">
+  <div uk-grid>
+
+    <div class="uk-width-1-1 uk-width-3-5@s">
+      <img class="bannerImage" src="app/single_products/magnumQueenBedroom/magnumQueenBedroom_prime.jpg">
+    </div>
+
+    <div class="uk-width-1-1 uk-width-2-5@s">
+      <div class="uk-card uk-card-default" style="padding: 25px;">
+            <div style="font-size:0.9em ">
+              <span id="productName" >Magnum Queen Bedroom</span><br>
+            Make your plan.
+            <hr>
+            </div>
+
+          <div >
+            Choose your Package:
+          </div>
+
+          <div class="uk-child-width-1-3 uk-grid-small uk-grid-match" uk-grid style="margin-top: 10px">
+              <div>
+                  <div class=" uk-card-default tenureRates basic" ng-click="activePackage('basic')">
+                    <div>
+                      Basic
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates value" ng-click="activePackage('value')">
+                    <div>
+                      Value
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates prime" ng-click="activePackage('prime')">
+                    <div>
+                      Prime
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <br />
+          <hr>
+
+
+          <div id="tenureRatesHeading" >
+            Tarrif Rates:
+          </div>
+          <div class="uk-child-width-1-3 uk-grid-small uk-grid-match" uk-grid style="margin-top: 10px">
+              <div>
+                  <div class=" uk-card-default tenureRates ">
+                    <div><span class="tenureRatesMonths">1-2 months</span> <br><span class="tenureRatesPrices"><i class="fa fa-inr"></i>{{tarrif_1to2}}/ mo</span>
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates " style="">
+                    <div><span class="tenureRatesMonths">3-9 months</span> <br><span class="tenureRatesPrices"><i class="fa fa-inr"></i>{{tarrif_3to9}}/ mo</span>
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <div class=" uk-card-default tenureRates " style="">
+                    <div><span class="tenureRatesMonths">10+ months</span> <br><span class="tenureRatesPrices"><i class="fa fa-inr"></i>{{tarrif_10plus}}/ mo</span>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+                <table style="width: 100%;border:0px dotted #eeeeee;padding:10px;border:1px solid #eee;margin-top: 15px;">
+                  <tr >
+                    <td style="text-align: left;border:0px solid red;font-size: 0.9em">
+                     Refundable Deposit<br>
+                     <span style="font-size: 0.8em">(To be paid now)</span>
+                    </td>
+                    <td style="text-align: right;border:0px solid red;font-size:0.93em">
+                      <i class="fa fa-inr"></i>500/-
+                    </td>
+                  </tr>
+               </table>
+
+
+          <hr>
+            
+            <span style="color:#2d51a3;font-weight:bolder">Choose your tenure:</span>
+            <div style="text-align: center">
+            <button class="uk-button uk-button-default" type="button" style="margin-top: 10px;
+  text-transform: lowercase;">{{selectedTenure}} <span uk-icon="icon: chevron-down; ratio: 1"></span></button>
+
+<div uk-dropdown style="max-height:300px;overflow:scroll" class="tenureRateSelector">
+  <ul class="uk-nav uk-dropdown-nav" >
+  <li ng-click="activeTenure(tarrif_1,1)" >Rs.{{tarrif_1}}/mo <span class="db">for</span> 1 month</li>
+  <li ng-click="activeTenure(tarrif_2,2)" >Rs.{{tarrif_2}}/mo <span class="db">for</span> 2 months</li>
+  <li ng-click="activeTenure(tarrif_3,3)" >Rs.{{tarrif_3}}/mo <span class="db">for</span> 3 months</li>
+  <li ng-click="activeTenure(tarrif_4,4)" >Rs.{{tarrif_4}}/mo <span class="db">for</span> 4 months</li>
+  <li ng-click="activeTenure(tarrif_5,5)" >Rs.{{tarrif_5}}/mo <span class="db">for</span> 5 months</li>
+  <li ng-click="activeTenure(tarrif_6,6)" >Rs.{{tarrif_6}}/mo <span class="db">for</span> 6 months</li>
+  <li ng-click="activeTenure(tarrif_7,7)" >Rs.{{tarrif_7}}/mo <span class="db">for</span> 7 months</li>
+  <li ng-click="activeTenure(tarrif_8,8)" >Rs.{{tarrif_8}}/mo <span class="db">for</span> 8 months</li>
+  <li ng-click="activeTenure(tarrif_9,9)" >Rs.{{tarrif_9}}/mo <span class="db">for</span> 9 months</li>
+  <li ng-click="activeTenure(tarrif_10,10)" >Rs.{{tarrif_10}}/mo <span class="db">for</span> 10 months</li>
+  <li ng-click="activeTenure(tarrif_11,11)" >Rs.{{tarrif_11}}/mo <span class="db">for</span> 11 months</li>
+  <li ng-click="activeTenure(tarrif_12,12)" >Rs.{{tarrif_12}}/mo <span class="db">for</span> 12 months</li>
+  <li ng-click="activeTenure(tarrif_13,13)" >Rs.{{tarrif_13}}/mo <span class="db">for</span> 13 months</li>
+  <li ng-click="activeTenure(tarrif_14,14)" >Rs.{{tarrif_14}}/mo <span class="db">for</span> 14 months</li>
+  <li ng-click="activeTenure(tarrif_15,15)" >Rs.{{tarrif_15}}/mo <span class="db">for</span> 15 months</li>
+  <li ng-click="activeTenure(tarrif_16,16)" >Rs.{{tarrif_16}}/mo <span class="db">for</span> 16 months</li>
+  <li ng-click="activeTenure(tarrif_17,17)" >Rs.{{tarrif_17}}/mo <span class="db">for</span> 17 months</li>
+  <li ng-click="activeTenure(tarrif_18,18)" >Rs.{{tarrif_18}}/mo <span class="db">for</span> 18 months</li>
+  </ul>
+</div>
+            </div>
+            <hr>
+
+            <div uk-grid>
+              <div class="uk-width-1-1">
+                <table style="width: 100%;border:2px dotted #2d51a3;padding:20px">
+                  <tr >
+                    <td style="text-align: left;border:0px solid red;color:#2d51a3;font-weight: bolder">
+                      Monthly Rent:
+                    </td>
+                    <td style="text-align: right;border:0px solid red">
+                      <i class="fa fa-inr"></i>{{orderTarrif}}/-
+                    </td>
+                  </tr>
+               </table>
+              <table style="width: 100%;font-size: 0.85em;margin-top: 3px;">
+                  <tr >
+                    <td style="text-align:left;">
+                      <img src="public/img/delivery_fees_truck.png" style="width:30px;"><i> Free Delievery</i>
+                    </td>
+                    <td style="text-align: right;border:0px solid red">
+                      (1 month = 30 days)
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+
+            <div>
+                <table style="width: 100%;margin-top: 35px;">
+                  <tr >
+                    <td style="text-align: left;">
+                     <button class="uk-button uk-button-default addToCart" ng-click="submitOrder()" >Add to Cart</button>
+                    </td>
+                    <td style="text-align: right;">
+                      <button class="uk-button uk-button-primary rentNow">Rent Now</button>
+                    </td>
+                  </tr>
+               </table>
+              
+            </div>
+
+      </div>
+      <br>
+
+<!-- Add ons start -->
+<div class="uk-container">
+  <div style="margin-top: 20px;font-family:'Muli'">
+    <span style="font-size: 1.8em; color:#2d51a3;font-weight: bold">Choose Addons</span><br>
+    Essentials add tiny details to your product enhancing its overall experience
+    <hr class="uk-divider-small">
+  </div>
+
+  <div uk-slider="center: true">
+
+    <div class="uk-position-relative uk-visible-toggle uk-light">
+
+        <ul class="uk-slider-items uk-child-width-1-4@s uk-grid">
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/cskodd2n-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Set of 2 - Sheer Curtain <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>30/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table> 
+                          <button class="uk-button uk-button-primary addButton" style="background-color:#2d51a3;color:#fff;margin-top:10px;padding:1px 20px;border:0px solid red;border-radius: 10px;"
+                            ng-click="addAddon(30,100,1801,'Set of 2 - Sheer Curtain','https://p.rmjo.in/productSquare/cskodd2n-300x300.jpg')"
+                            >Add</button>                        
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/awabf9kb-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Crimson table lamp Red <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>20/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>    
+                          <button class="uk-button uk-button-primary addButton" style="background-color:#2d51a3;color:#fff;margin-top:10px;padding:1px 20px;border:0px solid red;border-radius: 10px; "
+                            ng-click="addAddon(30,100,1802,'Crimson table lamp Red','https://p.rmjo.in/productSquare/awabf9kb-300x300.jpg')"
+                            >Add</button>                           
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/0l34fkrj-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Wingman bedside table <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>45/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>      
+                          <button class="uk-button uk-button-primary addButton" style="background-color:#2d51a3;color:#fff;margin-top:10px;padding:1px 20px;border:0px solid red;border-radius: 10px; "
+                            ng-click="addAddon(30,100,1803,'Wingman bedside table','https://p.rmjo.in/productSquare/0l34fkrj-300x300.jpg')"
+                            >Add</button>                         
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/rmyvugv4-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Green Wedge fitted bedsheet <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>39/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>      
+                          <button class="uk-button uk-button-primary addButton" style="background-color:#2d51a3;color:#fff;margin-top:10px;padding:1px 20px;border:0px solid red;border-radius: 10px; "
+                            ng-click="addAddon(30,100,1804,'Green Wedge fitted bedsheet','https://p.rmjo.in/productSquare/rmyvugv4-300x300.jpg')"
+                            >Add</button>                         
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/pi04nlbv-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Set of 2 - Fibre Pillow <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Cotton
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>30/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>       
+                          <button class="uk-button uk-button-primary addButton" style="background-color:#2d51a3;color:#fff;margin-top:10px;padding:1px 20px;border:0px solid red;border-radius: 10px; "
+                            ng-click="addAddon(30,100,1805,'Set of 2 - Fibre Pillow','https://p.rmjo.in/productSquare/pi04nlbv-300x300.jpg')"
+                            >Add</button>                        
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default" style="text-align: center">
+                    <div class="uk-card-media-top">
+                      <img src="https://p.rmjo.in/productSquare/xtgrb112-300x300.jpg" style="max-height:160px;" alt="">
+                    </div>
+                    <div style="padding:20px 15px;font-family:'Muli';">
+                        <div>
+                          <span style="font-weight:bold;font-size: 1.1em;">
+                            Queen Mattress - Foam <br>
+                          </span>
+
+                          <table style="width: 100%;padding: 10px 15px;font-size: 0.85em;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:15px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Dimension
+                              </td>
+                              <td style="text-align: right">
+                                28"L x 18"B x 71"H
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Material
+                              </td>
+                              <td style="text-align: right">
+                                Metal Base
+                              </td>
+                            </tr>
+                          </table>
+
+                          <table style="width: 100%;padding: 0px 15px;font-size: 0.85em;margin-top:10px">
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Rent
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>30/ mo
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left;font-weight: bold">
+                                Deposit
+                              </td>
+                              <td style="text-align: right">
+                                <i class="fa fa-inr"></i>100/ mo
+                              </td>
+                            </tr>
+                          </table>           
+                          <button class="uk-button uk-button-primary addButton" style="background-color:#2d51a3;color:#fff;margin-top:10px;padding:1px 20px;border:0px solid red;border-radius: 10px; "
+                            ng-click="addAddon(30,100,1806,'Queen Mattress - Foam','https://p.rmjo.in/productSquare/xtgrb112-300x300.jpg')"
+                            >Add</button>                    
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous" style="color:#212121;"></a>
+        <a class="uk-position-center-right uk-position-small " href="#" uk-slidenav-next uk-slider-item="next" style="color:#212121"></a>
+
+    </div>
+
+</div>
+</div>
+
+<!-- Add ons ends -->
+
+
+    <!-- *** Mobile Product Details and FAQ starts -->
+  <div style="margin-top:10px">
+      <ul uk-tab style="width: 100%">
+          <li id="productDetails" style="width:45%"><a href="#"  style="color:#2d51a3;">Product Details</a></li>
+          <li id="frequentQueries" style="width:49%"><a href="#"  style="color:#2d51a3">Frequent Queries</a></li>
+      </ul>
+
+      <ul class="uk-switcher uk-margin">
+          <li>
+            <p style="font-size: 1.4em;font-family:'Muli';color:#212121;font-weight: bold">Products Included:</p>
+            <hr class="uk-divider-small">
+        <div class="uk-card uk-card-default" style="padding:10px">
+          <div uk-grid>
+            <div class="uk-width-1-1">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/jlg7jeo3-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2yxyoxej-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/zt0ixo8w-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-1">
+              <p style="color:#212121;font-size: 1.1em">Magnum Wardrobe 2 Door  <span style="font-size:0.6em;color:#fff;background:#1e87f0;padding:3px;">Core Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">We know you hate the cluttered clothes across your chair. The Magnum 2-door wardrobe can ease your worries. The shelf space alone can intimidate your space into tidying up!</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>28"L x 18"B x 71"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>8 shelf configuration Lockable</li>
+                        <li>Hanger rod installed</li>
+                        <li>2 door configuration</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+        </div>
+          <hr>
+        <div class="uk-card uk-card-default" style="padding:10px">
+          <div uk-grid >
+            <div class="uk-width-1-1">
+                <div uk-slideshow="animation: push;min-height: 350;autoplay: true;autoplay-interval: 3500;pause-on-hover: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                      <ul class="uk-slideshow-items">
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/79z3mtnk-500x500.jpg" alt="">
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/2f3c3hj0-500x500.jpg" alt="" >
+                          </li>
+                          <li>
+                              <img src="https://p.rmjo.in/productSquare/48ikp2ag-500x500.jpg" alt="">
+                          </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  </div>
+                  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>                
+            </div>
+
+            <div class="uk-width-1-1">
+              <p style="color:#212121;font-size: 1.1em">Poise Queen Bed  <span style="font-size:0.6em;color:#fff;background:#1e87f0;padding:3px;">Core Product</span></p>
+              <hr class="uk-divider-small"> 
+              <p style="color:#9e9e9e;font-size: 0.8em">Comfort and compactness, get them both with the Poise queen bed. The bed's strong metal frame ensures durability while the honey-toned solid wood adds both style and comfort to the mix.</p>
+
+              <table style="width:100%;border:0px solid red;">
+                <tr>
+                  <td style="border:0px solid green;width:50%;vertical-align: baseline;">
+                    <span style="font-size:0.9em;color:#424242">Dimensions</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>76"L x 62"B x 17"H</li>
+                    </ul>
+                    <span style="font-size:0.9em;color:#424242">Color & Material</span><br>
+                    <span style="font-size:0.75em"><i class="fa fa-circle" style="color:rgb(136, 84, 41)"></i> &nbsp Metal & Solid Wood</span>
+                  </td>
+                  <td>
+                    <span style="font-size:0.9em;color:#424242">Features & Specs</span>
+                    <ul class="uk-list uk-list-bullet" style="font-size:0.75em">
+                        <li>Metal bodied bed</li>
+                        <li>Solid wood headboard</li>
+                        <li>Durable coating to prevent rust</li>
+                        <li>Honey finish</li>
+                        <li>To fit Mattress Size: 72" L x 60" B</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>                         
+            </div>
+          </div>
+        </div>
+          <hr>
+
+          </li>
+          <!-- *** FAQ Starts *** -->
+          <li style="font-family: 'Muli'">
+
+            <span style="font-size:1.05em;font-weight:bold">What is RMI ? How is it different from monthly rentals I pay to Rentomojo ?</span><br>
+            <span style="font-size:0.85em">
+              RMI is a short form for Rentomojo Monthly Installments which are the lease payments that you give monthly for usage of the product for a stipulated time frame. It depends on factors like market value of the product, tenure of service and interest charged.
+              Monthly Rentals are different from RMI as it also incorporates over the top expenses like insurance, maintanence costs etc over and above RMI costs per month.
+            <br>
+              Monthly Rental = RMI + Insurance costs / month + Mainitanence Costs / Month
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Why do you guys compare your service with EMI ?</span><br>
+            <span style="font-size:0.85em">
+              We are firm believers of the fact that long term renting from Rentomojo makes more sense than outright purchase or other forms of buying a product from retail such as EMI. Thats why we compare overall costs with rentomojo with your total costs in the case of EMI for different tenures. Checkout the comparision of costs vs benefits.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">How does rent to own work ?</span><br>
+            <span style="font-size:0.85em">
+              Rent to own is an option to own the product at any time during the tenure or at the end of tenure, by paying a nominal price.The customer needs to complete minimum 12 months tenure to avail this option. For eg if you take a washing machine on 36 months rent, you will keep paying 659 rs every month and at the end of 36 months - you can own the product by paying 4378 rs.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Who rents for 36 months ?</span><br>
+            <span style="font-size:0.85em">
+              36 months is the most preferred tenure due to the following reasons : possibility of shifting is high as an avg consumer today shifts twice in 3 years*. Rentomojo saves you from this burden by providing you free relocation within city or any of the major metro cities*. Not just that ! you end up paying a smaller monthly payout compared to emi, with an option to either own or return the product anytime as per your changing life priorities. Not to mention you can swap every 12 months. Compare costs vs benefits for 36 months to check how financially viable it is !
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Will i be charged any cancellation fee if i return early ?</span><br>
+            <span style="font-size:0.85em">
+              We do take a settlement fee when you close early. Lets us explain how we charge with an example. Say you have taken the products for 12 months and your friend has taken for 6 months. If both of you close at 6 months, you pay only a difference of what your friend has paid for 6 months and what you have paid in those 6 months. Isnt it fair ! check out settlement calculator
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Why are rentals changing with tenure ?</span><br>
+            <span style="font-size:0.85em">
+              Its unfair to charge the same price across tenures as consumers end up paying a lot more than whats fair in cases of longer tenures. so to make it fair for someone who is committing longer, we reduce rentals with tenure similarly to how EMI reduces with tenure.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Is relocation really free ?</span><br>
+            <span style="font-size:0.85em">
+              Intercity relocation and Intracity relocation comes free with our service. We help you relocate to any cities we are present in.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">Why do you guys take deposit ?</span><br>
+            <span style="font-size:0.85em">
+              We typically give you products worth a lot more than what we ask for in return as monthly rentals. To safegaurd us with risk of defaults or intential damage, we charge a nominal deposit.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">How soon can i swap my products ?</span><br>
+            <span style="font-size:0.85em">
+              Our products can be swapped every 12 months.
+            </span>
+            <hr>
+
+            <span style="font-size:1.05em;font-weight:bold">What all do you cover in free maintanence ?</span><br>
+            <span style="font-size:0.85em">
+              We take care of all manufacturing defects and minor wear and tear. Not only that we end up waving damage upto ₹1000*
+            </span>
+
+
+            
+          </li>
+          <!-- *** FAQ Ends *** -->
+      </ul>
+    </div>
+<!-- *** Mobile Product Details and FAQ Ends -->
+
+
+
+
+<!-- Offer Starts -->
+      <div class="uk-card uk-card-default uk-width-1-1@s" style="padding: 25px;font-family:'Muli'">
+          <img src="https://www.guarented.com/images/offers/product_offer.png" style="width:28px;vertical-align: text-bottom;">
+          <span style="color:#2d51a3;font-size:1.4em;font-weight:bold">O</span><span style="color:#2d51a3;font-size:1.1em;font-weight:bold">FFERS</span>
+          <ul class="uk-list uk-list-bullet" style="font-size:0.9em">
+            <li>Use Code SAVE15 & get 15% Off Per Month for a Minimum Rental Value of Rs 2000. <a>View T&C*</a></li>
+            <li>Use Code SAVE20 to get 20% Off Per Month for a Minimum Rental Value of Rs 4000. <a>View T&C*</a></li>
+            <li>Use Code 1MONTHOFF and get 1st Month's Rent Free. Minimum Tenure is 10+ Months. <a>View T&C*</a></li>
+        </ul>
+      </div>
+<!-- Offer Ends -->
+<br>
+<!-- Similar Product Starts -->
+      <div class="uk-card uk-card-default uk-width-1-1@s" style="padding: 25px;font-family:'Muli'">
+          
+          <span style="color:#2d51a3;font-size:1.1em;font-weight:bold">View Similar Products</span>
+          
+          <div uk-slider="center: true" style="margin-top:20px;">
+
+                <div class="uk-position-relative uk-visible-toggle uk-light">
+
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid" style="text-align: center">
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/cltn-sng-pack/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/elite-cltn-sng-bd/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/elt-bt/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint8/images_03/royal-sbed/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://storage.googleapis.com/static_images/v3_product_images/sprint8/images_03/royal-sbed/lifestyle/internal_thumb/1.png" alt="">
+                                </div>
+                                <div style="font-size:0.75em;padding:9px;">
+                                  Single Bed and mattress
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous" style="color:#212121"></a>
+                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="color:#212121"></a>
+
+                </div>
+
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+            </div>
+
+      </div>
+<!-- Similar Product Ends -->
+
+    </div>
+<!-- Right Sidebar ends -->
+  </div>
+</div>
+
+</div>
+
+<!-- 
+************************************************************************
+****************************** Mobile Website ends ********************
+ -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

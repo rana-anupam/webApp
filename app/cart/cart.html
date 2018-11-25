@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+
+<div id="cart_heading_div">
+  <span class="cart_heading_active cartHead">CART</span> ------ <span class="addressHead">ADDRESS</span> ------ <span class="confirmHead">CONFIRM</span>
+</div>
+
+<div class="uk-container" style="margin-top: 40px">
+  <div uk-grid>
+  <!-- ********* Left Panel Starts ********* -->
+    <div class="uk-width-1-1 uk-width-2-3@s">
+
+
+<!-- ********************************************************** -->
+<!-- **************** Cart Product View Starts **************** -->
+<!-- ********************************************************** -->
+
+<!-- Desktop Cart View Starts -->
+  <div class="desktop_cart_view" ng-if="isCartState">
+    <!-- Product Starts -->
+    <div ng-repeat="product in products" >
+      <div  class="uk-card uk-card-default uk-width-1-1" style="padding:30px 25px;">
+        <table style="border:0px solid red;">
+          <tr style="border:0px solid red;">
+            <td style="border:0px solid red;width:30%">
+              <img ng-src="{{product.productImage}}" style="border:0px;border-radius:5px;">
+            </td>
+            <td style="padding-left:40px;width:35%;border:0px solid red;font-size:0.8em;font-family:'Muli'">
+              <span style="font-weight:bold;color:#212121;font-size:1.1em">{{product.productName}}</span><br>
+              <span>Tenure: <b>{{product.tenure}} months</b></span><br>
+              <span>Deposit: <b>Rs. {{product.deposit}}</b></span><br>
+              <span style="color:#1e87f0;font-size:0.9em">(Fully Refundable)</span><br>
+              <span style="color:#2d51a3"><b>Monthly Rent: Rs. {{product.tarrif}}</b></span>
+            </td>
+            <td style="border:0px solid red;text-align:center;width:20%;line-height:32px;vertical-align: baseline;">
+              <span style="font-size:1em;color:#616161;font-family:'Muli'">Quantity</span><br>
+              <span style="font-size:0.8em;border:1px solid #9e9e9e;padding:4px 10px;border-radius:5px">
+               <span class="cursorH" ng-click="updateQuantity($index,'dec')">-</span> &nbsp {{product.quantity}} &nbsp <span class="cursorH" ng-click="updateQuantity($index,'inc')">+</span>
+              </span><br>
+              <button class="uk-button uk-button-text" ng-click="deleteProduct($index)" style="font-family:'Muli';font-size:0.7em"> Remove</button>
+            </td>
+            <td style="border:0px solid red;text-align:center;vertical-align: baseline;">
+              <span style="font-size:1.02em;color:#616161;font-family:'Muli'">Amount</span><br>
+              <span style="font-weight: bold">Rs.{{product.quantity * product.tarrif}}</span>
+            </td>
+        </tr>
+        </table>     
+      </div>
+      <br><br>
+    </div>
+      <!-- Product Ends -->
+
+    </div>
+<!-- Desktop Cart Ends  -->
+
+<!-- Mobile Cart  Starts -->
+<div class="mobile_cart_view" ng-if="isCartState">
+  <!-- Product Starts -->
+<div ng-repeat="product in products">
+  <div class="uk-card uk-card-default uk-width-1-1" style="padding: 10px 8px">
+        <table style="border-bottom:0px solid #e0e0e0;padding-bottom: 8px;">
+          <tr style="border:0px solid red;width:100%">
+            <td style="border:0px solid red;width:45%">
+              <img ng-src="{{product.productImage}}" style="border:1px;border-radius:5px;">
+            </td>
+            <td style="width:55%;border:0px solid red;font-family:'Muli';padding-left:5px;text-align:center">
+              <span style="font-weight:bold;color:#212121;font-size:0.8em">{{product.productName}}</span><br>
+              <!-- <span style="font-size:0.6em;border:1px solid #9e9e9e;padding:3px 7px;border-radius:5px"> - &nbsp 1 &nbsp + </span> -->
+
+              <span style="font-size:0.8em;border:0px solid #9e9e9e;padding:3px 7px;border-radius:5px">
+
+               <span class="cursorH" uk-icon="icon: minus-circle; ratio: 0.9" ng-click="updateQuantity($index,'dec')"></span> 
+               &nbsp {{product.quantity}} &nbsp 
+               <span class="cursorH" uk-icon="icon: plus-circle; ratio: 0.9" ng-click="updateQuantity($index,'inc')"></span>
+
+              </span> &nbsp &nbsp
+
+
+              <button class="uk-button uk-button-text" ng-click="deleteProduct($index)" style="font-family:'Muli';font-size:0.6em"> Remove</button><br>
+              <span ng-if="!product.addon" style="font-size: 0.7em">Tenure: <b>{{product.tenure}} months</b></span>
+            </td>
+          </tr>
+          </table>
+          <table style="border:1px dashed #1e87f0;text-align: center;width:100%;padding:5px 0px">
+          <tr style="border:0px solid red;width:100%">
+            <td style="border:0px solid red;font-size:0.7em;font-family:'Muli';width:30%;vertical-align: baseline ">
+              <span style="color:#616161">Rs. {{product.tarrif}}</span> <br><span style="color:#1e87f0">Monthly</span>
+            </td>
+            <td style="border:0px solid red;vertical-align: baseline;font-size:0.7em;font-family:'Muli';width:40%">
+              <span>Rs. {{product.deposit}}</span><br>
+              <span>Security Deposit</span><br>
+              <span style="color:#2d51a3;font-size:0.9em">(Fully Refundable)</span><br>
+              
+            </td>
+
+            <td style="border:0px solid red;text-align:center;vertical-align: baseline;width:30%;font-size:0.7em;font-family:'Muli' ">
+              <span style="font-weight: bold;color:#212121">Rs.{{product.tarrif * product.quantity}}</span><br>
+              <span style="color:#616161;font-family:'Muli'">Amount</span><br>
+              
+            </td>
+        </tr>
+        </table>
+  </div>
+<br>
+</div>
+<!-- Product Ends -->
+</div>
+ 
+<!-- Mobile Cart Ends  -->
+
+
+<!-- ********************************************************** -->
+<!-- **************** Cart Product View Ends **************** -->
+<!-- ********************************************************** -->
+
+
+<!-- ********************************************************** -->
+<!-- **************** Cart Address View Starts **************** -->
+<!-- ********************************************************** -->
+    <div class="uk-container uk-margin" ng-if="isAddressState">
+      <div class="uk-card uk-card-default uk-width-1-1" style="padding: 30px;">
+          <span class="uk-card-title" style="color:#2d51a3;font-size:1.5em;font-family:'ProximaNovaRegular'">Add delivery address</span> <hr class="uk-divider-small">
+          
+          <form class="uk-grid-small" id="addressForm" uk-grid>
+            <div class="uk-width-1-2@s">
+                  <input class="uk-input" id="addressFormName" ng-model="address.fullName" type="text" placeholder="Full Name" required>
+              </div>
+              <div class="uk-width-1-2@s">
+                  <input class="uk-input" type="number" id="addressFormMobile" min="6000000000" max="9999999999" step="1" placeholder="10 digit mobile number" oninvalid="setCustomValidity('Please enter a valid mobile No.')" ng-model="address.phone" required>
+                  <span style="font-size:0.6em;font-family:'Muli';line-height:5px;margin-top:-2px;">Delivery and support executives will call on this number to schedule your delivery
+                  </span>
+              </div>
+
+              <div class="uk-width-2-5@s" style="margin-top: 25px">
+                  <input class="uk-input" id="addressFormFlat" ng-model="address.flat" type="text" placeholder="Flat / House No. / Floor / Building" required>
+              </div>
+              <div class="uk-width-3-5@s" style="margin-top: 25px">
+                  <input class="uk-input" id="addressFormColony" ng-model="address.colony" type="text" placeholder="Colony / Street / Locality" required>
+              </div>
+              <div class="uk-width-1-2@s" style="margin-top: 35px">
+                  <input class="uk-input" id="addressFormLandmark" ng-model="address.landmark" type="text" placeholder="Landmark" >
+              </div>
+              <div class="uk-width-1-4@s" style="margin-top: 35px">
+                  <input class="uk-input" id="addressFormPincode" ng-model="address.pincode" type="number" min="100000" max="999999" step="1" type="text" placeholder="Pin Code" required>
+              </div>
+              <div class="uk-width-1-4@s" style="margin-top: 35px">
+                  <input class="uk-input" type="text" ng-model="address.city" placeholder="Bangalore" disabled>
+              </div>
+          </form>
+      </div>
+    </div>
+
+<!-- ********************************************************** -->
+<!-- **************** Cart Address View Ends **************** -->
+<!-- ********************************************************** -->
+
+
+
+<!-- ********************************************************** -->
+<!-- **************** Cart Confirm View Starts **************** -->
+<!-- ********************************************************** -->
+    <div class="uk-container uk-margin" ng-if="isSummaryState">
+      <div class="uk-card uk-card-default uk-width-1-1" style="padding: 30px;">
+          <span class="uk-card-title" style="color:#2d51a3;font-size:1.5em;font-family:'ProximaNovaRegular'">Order Summary</span> <hr class="uk-divider-small">
+
+          <div uk-grid>
+              <div class="uk-width-1-1 uk-width-1-3@s" style="font-family:Tahoma">                 
+                  <span uk-icon="icon: location; ratio: 1" style="color:#2d51a3"></span><span style="font-size:1.05em"> Your Delivery Address</span>
+                  <div style="padding:15px 0px 10px 10px">
+                    <span style="font-weight:bolder;font-size:1em;font-family:'Muli'">{{address.fullName}}</span>
+                    <br>
+                    <div style="font-size:0.95em;font-family:'Muli'">
+                      {{address.flat}}, {{address.colony}},
+                      <span ng-if="address.landmark"><br>Landmark: {{address.landmark}},</span>
+                      <br>Bangalore - {{address.pincode}}</div>
+                  </div>
+                  <span style="font-family:'Muli';font-weight:bold">&nbsp Phone: {{address.phone}}</span>
+              </div>
+
+
+              <div class="uk-width-1-1 uk-width-2-3@s" style="font-family:Tahoma">
+                  <span uk-icon="icon: credit-card; ratio: 1.2" style="color:#2d51a3;"></span><span style="font-size:1.05em">&nbsp Payment Details</span>
+                  <div style="padding:15px 0px 10px 10px" >
+                    <ul class="uk-list uk-list-bullet" style="font-family:'Muli';font-size:0.85em;text-align:justify;">
+                        <li>Once the order has been placed, you’ll be required to share address and ID proof documents along with the first month’s rent to schedule your delivery.</li>
+                        <li>After confirming the order you will recieve a validation call from our team. After validation you will receive the link to make the payment.</li>
+                        <li>One month consists of 30 days while considering for billing cycle.</li>
+                        <li>Your billing cycle will begin from the date of your delivery.</li>
+                        <li>Monthly rent will be collected at the starting of every month.</li>
+                    </ul>
+                  </div>
+              </div>              
+          </div>
+          <hr>
+
+<!-- Desktop View of Ivoice Cart Starts -->
+  <div class="desktop_cart_view" >
+    <!-- Product Starts -->
+    <div ng-repeat="product in products" >
+      <div class="uk-width-1-1" style="padding:30px 25px">
+        <table style="border:0px solid red;">
+          <tr style="border:0px solid red;">
+            <td style="border:0px solid red;width:30%">
+              <img ng-src="{{product.productImage}}" style="border:0px;border-radius:5px;">
+            </td>
+            <td style="padding-left:40px;width:35%;border:0px solid red;font-size:0.8em;font-family:'Muli'">
+              <span style="font-weight:bold;color:#212121;font-size:1.1em">{{product.productName}}</span><br>
+              <span>Tenure: <b>{{product.productName}} months</b></span><br>
+              <span>Deposit: <b>Rs. {{product.deposit}}</b></span><br>
+              <span style="color:#1e87f0;font-size:0.9em">(Fully Refundable)</span><br>
+              <span style="color:#2d51a3"><b>Monthly Rent: Rs. {{product.tarrif}}</b></span>
+            </td>
+            <td style="border:0px solid red;text-align:center;width:20%;line-height:32px;vertical-align: baseline;">
+              <span style="font-size:1em;color:#616161;font-family:'Muli'">Quantity</span><br>
+              <span style="font-size:0.8em;border:1px solid #9e9e9e;padding:4px 10px;border-radius:5px"> {{product.quantity}}</span><br>
+            </td>
+            <td style="border:0px solid red;text-align:center;vertical-align: baseline;">
+              <span style="font-size:1.02em;color:#616161;font-family:'Muli'">Amount</span><br>
+              <span style="font-weight: bold">Rs. {{product.quantity * product.tarrif}}</span>
+            </td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Product Ends -->
+</div>
+<!-- Desktop View of Ivoice Cart Ends -->
+<!-- Mobile View of Ivoice Cart Starts -->
+    <div class="mobile_cart_view">
+<!-- Product Ends -->
+  <div ng-repeat="product in products">
+        <div class="uk-width-1-1" style="padding: 10px 0px">
+              <table style="border-bottom:0px solid #e0e0e0;padding-bottom: 8px;">
+                <tr style="border:0px solid red;width:100%">
+                  <td style="border:0px solid red;width:45%">
+                    <img ng-src="{{product.productImage}}" style="border:1px;border-radius:5px;">
+                  </td>
+                  <td style="width:55%;border:0px solid red;font-family:'Muli';padding-left:5px;text-align:center">
+                    <span style="font-weight:bold;color:#212121;font-size:0.7em">{{product.productName}}</span><br>
+                    <span style="font-size:0.6em;border:1px solid #9e9e9e;padding:3px 7px;border-radius:5px"> {{product.quantity}}</span><br>
+                    <span style="font-size: 0.7em">Tenure: <b>{{product.tenure}} months</b></span>
+                  </td>
+                </tr>
+                </table>
+                <table style="border:1px dashed #1e87f0;text-align: center;width:100%;padding:5px 0px">
+                <tr style="border:0px solid red;width:100%">
+                  <td style="border:0px solid red;font-size:0.7em;font-family:'Muli';width:30%;vertical-align: baseline ">
+                    <span style="color:#616161">Rs. {{product.tarrif}}</span> <br><span style="color:#1e87f0">Monthly</span>
+                  </td>
+                  <td style="border:0px solid red;vertical-align: baseline;font-size:0.7em;font-family:'Muli';width:40%">
+                    <span>Rs. {{product.deposit}}</span><br>
+                    <span>Security Deposit</span><br>
+                    <span style="color:#2d51a3;font-size:0.9em">(Fully Refundable)</span><br>
+                    
+                  </td>
+
+                  <td style="border:0px solid red;text-align:center;vertical-align: baseline;width:30%;font-size:0.7em;font-family:'Muli' ">
+                    <span style="font-weight: bold;color:#212121">Rs.{{product.tarrif * product.quantity}}</span><br>
+                    <span style="color:#616161;font-family:'Muli'">Amount</span><br>
+                    
+                  </td>
+              </tr>
+              </table>
+        </div>
+  </div>
+<!-- Product Ends -->
+      </div>
+  <!-- Mobile View of Ivoice Cart Ends -->
+    </div>
+  </div>
+
+<!-- ********************************************************** -->
+<!-- **************** Cart Confirm View Ends **************** -->
+<!-- ********************************************************** -->
+
+
+    </div>
+    <!-- ********* Left Panel Ends ********* -->
+
+    <!-- ********* Right Panel Starts ********* -->
+    <div class="uk-width-1-1 uk-width-1-3@s">
+      <div class="uk-card uk-card-default cartSummaryRight_wrapper">
+          <div style="font-family: 'Muli';font-size: 1.2em;text-align:center;color:#2d51a3"> CART SUMMARY</div>   
+            <table style="width:100%;border:0px solid red;padding: 10px 20px;font-family:'Muli'">
+              <tr>
+                <td class="csLeft" > 
+                  Monthly Rent
+                </td>
+                <td class="csRight">
+                  Rs. {{cartSummaryRent}}
+                </td>
+              </tr>
+              <tr>
+                <td class="csLeft">
+                  Security Deposit
+                </td>
+                <td class="csRight">
+                  Rs. {{cartSummaryDeposit}}
+                </td>
+              </tr>
+              <tr>
+                <td class="csLeft">
+                  Coupon Discount
+                </td>
+                <td class="csRight">
+                  Rs. {{cartSummaryDiscount}}
+                </td>
+              </tr>
+              <tr>
+                <td class="csLeft" style="padding-bottom: 25px">
+                  Delivery
+                </td>
+                <td class="csRight" style="padding-bottom: 15px">
+                  <span style="color:#1e87f0;font-weight:bold;font-size:0.95em;"><i>Free</i></span>
+                </td>
+              </tr>
+              <tr >
+                <td class="csLeft" style="border-top:1px dashed #bdbdbd;padding-top:10px">
+                  Total Payable
+                </td>
+                <td class="csRight" style="border-top:1px dashed #bdbdbd;padding-top:10px">
+                  Rs. {{cartSummaryTotalPayable}}
+                </td>
+              </tr>
+
+            </table>
+
+            <form style="width:100%;text-align: center;">
+              <div class="uk-margin" >
+                  <div class="uk-inline" style="width:100%;margin-top:10px;padding-left:10px;font-family:'Muli';text-align:left">
+                      <input class="uk-input" ng-model="promoCode" id="promocode" type="text" style="width:68%;font-size:0.8em;margin-left:0px;padding:0px 0px 0px 5px;" placeholder="Do you have a promocode?">                     
+                      <button ng-click="applyPromo()" class="uk-button uk-button-primary" style="margin-left: -15px;margin-top:0px;">Apply</button>
+                  </div>
+                  <div ng-if="isPromoText" style="font-size:0.75em;color:{{promocodeTextColor}};text-align: left;font-family:'Muli'">{{promocodeText}}.</div><br>
+              </div>
+            </form>
+            <table id="cartSummaryButtons">
+              <tr style="width:100%;">
+                <td style="width:45%;text-align: left">
+                  <button ng-if="isAddressState || isSummaryState" class="uk-button uk-button-primary cartPreceed" ng-click="preceedState()">
+                    <span uk-icon="icon: arrow-left; ratio: 1"></span> Go Back</button>
+                </td>
+                <td style="width:50%;text-align: right;">
+                  <button ng-if="isCartState || isAddressState" class="uk-button uk-button-primary cartProceed" ng-click="proceedState()">{{proceedButtonText}}</button>
+                  <form ng-if="isSummaryState" method="post" id="payu-payment-form" action="https://secure.payu.in/_payment">
+                      <input type="hidden" name="hash" value="{{payU_hash}}"/>
+                      <input type="hidden" name="key" value="{{payU_key}}"/>
+                      <input type="hidden" name="txnid" value="{{payU_txnid}}"/>
+                      <input type="hidden" name="amount" value="{{payU_amount}}" />
+                      <input type="hidden" name="productinfo" value="{{payU_productinfo}}"/>
+                      <input type="hidden" name="firstname" value="{{payU_firstname}}" />
+                      <input type="hidden" name="email" value="{{payU_email}}" />
+                      <input type="hidden" name="phone" value="{{payU_phone}}" />
+                      <input style="display: none;" type="text" name="surl" value="{{payU_surl}}"/>
+                      <input type="hidden" name="furl" value="{{payU_furl}}">
+                      <input type="hidden" name="service_provider" value="payu_paisa"/>
+                      <button class="uk-button uk-button-primary cartProceed" type="submit" formtarget="_blank" >Check Out</button>
+                  </form>
+                </td>  
+              </tr>
+            </table>
+              
+      </div>
+      <br>  
+                <!-- Offer Starts -->
+                      <div class="uk-card uk-card-default uk-width-1-1@s" style="padding: 25px;font-family:'Muli'">
+                          <img src="https://www.guarented.com/images/offers/product_offer.png" style="width:28px;vertical-align: text-bottom;">
+                          <span style="color:#2d51a3;font-size:1.4em;font-weight:bold">O</span><span style="color:#2d51a3;font-size:1.1em;font-weight:bold">FFERS</span>
+                          <ul class="uk-list uk-list-bullet" style="font-size:0.9em">
+                            <li ng-repeat="offer in offers">{{offer}} <a ui-sref="offers_tnc">View T&C*</a></li>
+                        </ul>
+                      </div>
+                <!-- Offer Ends -->
+
+    </div>
+    <!-- ********* Right Panel Ends ********* -->
+
+  </div>
+</div>
+<br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+#desktopSubNav{
+  display: none;
+}
+
+#mobileSubNav{
+  display: block;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+</style>
+</head>
+
+<body>
+
+<div id="desktopSubNav">
+	<table style="width: 100%;font-family: 'Muli', sans-serif;font-size: 1em;">
+		<tr>
+			<td style="width: 60%;padding-left: 5vw;padding-top: 25px;padding-bottom: 25px;border-bottom:1px solid #e0e0e0;font-size: 1.1em">
+				<span ui-sref="products" style="font-weight:bold">Products</span> > Combos
+			</td>
+			<td ui-sref="allFurniture" style="text-align: center;padding: 25px;border-bottom: 1px solid #e0e0e0;">
+				Furniture
+			</td>
+			<td ui-sref="allAppliances" style="text-align: center;;padding: 25px;border-bottom:1px solid #e0e0e0">
+				Appliances
+			</td>
+			<td ui-sref="combos" style="text-align: center;padding: 25px;border-bottom:2px solid #2d51a3">
+				Combos
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div id="mobileSubNav">
+  <table style="width: 100%;font-family: 'Muli', sans-serif;font-size: 1em;">
+    <tr style="width:100%">
+      <td ui-sref="allFurniture" style="text-align: center;padding: 25px;border-bottom: 1px solid #e0e0e0;">
+        Furniture
+      </td>
+      <td ui-sref="allAppliances" style="text-align: center;;padding: 25px;border-bottom:1px solid #e0e0e0">
+        Appliances
+      </td>
+      <td ui-sref="combos" style="text-align: center;padding: 25px;border-bottom:2px solid #2d51a3">
+        Combos
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- Appliance Combos Starts -->
+<div class="products_combos_groupTitle">Appliance Combos:</div>
+<div class="uk-container">
+  <div class="uk-child-width-1-4@m" uk-grid>
+      
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/2-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Single Door Fridge + Top Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1151/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="appliances({id:'single_door_fridge_combo_and_top_load_wm'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/5-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Double Door Fridge + Front Load Washing Machines</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1403/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="appliances({id:'double_door_fridge_combo_and_front_load_wm'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+<!-- Appliance Combos Ends -->
+
+<br><br>
+
+
+</body>
+</html>

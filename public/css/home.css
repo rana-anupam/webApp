@@ -1,0 +1,124 @@
+
+  @font-face {
+    font-family: ProximaNovaRegular;
+    src: url(public/fonts/ProximaNovaRegular.ttf);
+}
+
+#main_banner{
+  margin-top: -130px;
+}
+
+#main_banner_heading{
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color:#fff;
+  font-family: 'ProximaNovaRegular';
+}
+
+#main_banner_text{
+  color: #fff;
+}
+
+#combo_slider_container{
+  margin-top:70px;
+}
+
+#combo_slider_container_heading{
+  font-size: 1.6em;
+  color:#1e87f0; 
+}
+
+#slider_sofa_heading{
+  font-family:'Raleway';
+  font-size: 2.1em;
+}
+
+#processMobile{
+  display: none;
+}
+
+#rtoLeftMobile{
+  display: none;
+}
+
+#mobileFooter{
+  display: hidden;
+}
+
+#desktopFooter{
+  display: block;
+}
+
+#mobile_bottomStrip{
+  display: none;
+}
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #main_banner{
+      margin-top: 20px;
+    }
+
+    #main_banner_heading{
+      font-size: 0.7em;
+      margin-top: 20px;
+      display: none;
+    }
+
+    #main_banner_text{
+        display: none;
+      }
+
+
+      #combo_slider_container{
+          margin-top:15px;
+        }
+
+    #combo_slider_container_heading{
+      font-size: 1.1em;
+      color:#1e87f0; 
+    }
+
+    #slider_sofa_heading{
+      font-family:'Raleway';
+      font-size: 1.3em;
+    }
+
+    #processDesktop{
+      display: none;
+    }
+
+    #processMobile{
+      display: block;
+    }
+    #rtoLeftDesktop{
+      display: none;
+    }
+
+    #rtoRightDesktop{
+      display: none;
+    }
+
+    #rtoLeftMobile{
+      display: block;
+    }
+
+    #mobileFooter{
+      display: block;
+    }
+
+    #desktopFooter{
+      display: none;
+    }
+
+    #mobile_bottomStrip{
+      display: block;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/

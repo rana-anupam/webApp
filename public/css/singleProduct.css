@@ -1,0 +1,194 @@
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+#tenureSelector{
+  text-align: left
+}
+
+.productName{
+  font-weight:bolder;
+  font-size: 1.6em;
+  color:#2d51a3;
+  font-family: 'ProximaNovaRegular'
+}
+
+#tenureRatesHeading{
+  color:#2d51a3;
+  margin-top:10px;
+  font-weight: bolder;
+}
+
+.tenureRates{
+  text-align: center;
+  padding: 19px;
+  max-height: 90px;
+  background-color: #fff;
+  color:#2d51a3;
+  cursor:pointer;
+}
+
+.tenureRates:hover{
+  background-color: #2d51a3;
+  color:#fff;
+}
+
+.tenureRatesMonths{
+  font-size:0.8em;
+}
+
+
+.tenureRatesPrices{
+  font-size:0.9em;
+  font-weight:bolder;
+}
+
+.addToCart{
+  font-size: 1em;
+}
+
+.rentNow{
+  width:105%;
+  font-size: 1.05em;
+}
+
+
+#productDetails a{
+  font-size:1.2em;
+}
+
+
+#frequentQueries a{
+  font-size:1.2em;
+}
+
+#desktopView{
+  display: block;
+  margin-top: 10px;
+}
+
+#mobileView{
+  display: none;
+}
+
+.packageActive{
+  color:#fff;
+  background-color:#2d51a3;
+}
+
+.tenureRateSelector ul li {
+  color:#1e87f0;
+  font-size: 1em;
+  letter-spacing:1px;
+  font-family:'Muli';
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.tenureRateSelector ul li:hover .db{
+  color:#2d51a3;
+}
+
+.db{
+  color:#aaa;
+}
+
+#addonContainer ul li button{
+  background-color:#2d51a3;
+  color:#fff;
+  margin-top:10px;
+  padding:1px 20px;
+  border:0px solid red;
+  border-radius: 10px; 
+}
+
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    #desktopSubNav{
+      display: none;
+    }
+
+    #mobileSubNav{
+      display: block;
+    }
+
+
+    .productName{
+      font-size: 1.2em;
+    }
+
+    .tenureRates{
+      padding: 5px;
+      max-height: 70px;
+    }
+
+    .tenureRatesMonths{
+      font-size:0.6em;
+    }
+
+
+    .tenureRatesPrices{
+      font-size:0.7em;
+      font-weight:bolder;
+    }
+
+    #tenureRatesHeading{
+      margin-top:15px;
+    }
+
+    .addToCart{
+      padding-right: 15px;
+      font-size: 0.9em;
+      padding-left: 15px;
+    }
+
+    .rentNow{
+      padding-right: 15px;
+      font-size: 1em;
+      padding-left: 15px;
+    }
+
+    #productDetails a{
+      font-size:0.8em;
+    }
+
+    #productDetails{
+      padding: 0px;
+      padding-left: 15px;
+    }
+
+    #frequentQueries{
+      padding: 0px;    
+    }
+
+    #frequentQueries a{
+      font-size:0.8em;    
+    }
+
+    #desktopView{
+      display: none;
+    }
+
+    #mobileView{
+      display: block;
+    }
+
+    .bannerImage{
+      margin-top:12px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/

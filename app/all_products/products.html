@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+#desktopSubNav{
+  display: none;
+}
+
+#mobileSubNav{
+  display: block;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+</style>
+</head>
+
+<body>
+
+<div id="desktopSubNav">
+	<table style="width: 100%;font-family: 'Muli', sans-serif;font-size: 1em;">
+		<tr>
+			<td style="width: 60%;padding-left: 5vw;padding-top: 25px;padding-bottom: 25px;border-bottom:1px solid #e0e0e0;font-size: 1.4em">
+				<span style="font-weight:bold"> All Products</span>
+			</td>
+			<td ui-sref="furniture" style="text-align: center;padding: 25px;border-bottom: 1px solid #e0e0e0;">
+				Furniture
+			</td>
+			<td ui-sref="appliances" style="text-align: center;;padding: 25px;border-bottom:1px solid #e0e0e0">
+				Appliances
+			</td>
+			<td ui-sref="combos" style="text-align: center;padding: 25px;border-bottom:1px solid #e0e0e0">
+				Combos
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div id="mobileSubNav">
+  <table style="width: 100%;font-family: 'Muli', sans-serif;font-size: 1em;">
+    <tr style="width:100%">
+      <td ui-sref="furniture" style="text-align: center;padding: 25px;border-bottom: 1px solid #e0e0e0;">
+        Furniture
+      </td>
+      <td ui-sref="appliances" style="text-align: center;;padding: 25px;border-bottom:1px solid #e0e0e0">
+        Appliances
+      </td>
+      <td ui-sref="combos" style="text-align: center;padding: 25px;border-bottom:2px solid #2d51a3">
+        Combos
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div class="uk-container" style="margin-top: 60px">
+  <div class="uk-child-width-1-4@m" uk-grid>
+
+  
+  <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/furniture/cowboy_single_nst_prime_light.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy Bedroom - Single</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.238/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="cowboy_single_nst_light"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/furniture/cowboy_double_nst_prime_light.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.397/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="cowboy_double_nst_light"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/furniture/myrilux_single_nst_prime_light.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux Bedroom - Single</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.353/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="myrilux_single_nst_light"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/furniture/myrilux_double_nst_prime_light.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="myrilux_double_nst_light"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/appliances/Mini_Fridge.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Mini Fridge</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.439/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="mini_fridge"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/appliances/Single_Door.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Single Door Refrigerator</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.589/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="single_door_refrigerator"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/appliances/Double_Door.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Double Door Refrigerator</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.839/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="double_door_refrigerator"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/appliances/Top_Load.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Top Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.539/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="top_load_wm"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./public/img/products/appliances/Front_Load.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Front Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.619/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="front_load_wm"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>  
+
+      <!-- APPLIANCE COMBOS STARTS -->
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/1-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Mini Fridge + Top Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.939/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Mini_Fridge_plus_Top_Load_WM"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/2-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Single Door Fridge + Top Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1089/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Single_Door_Fridge_plus_Top_Load_WM"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/3-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Double Door Fridge + Top Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1339/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Double_Door_Fridge_plus_Top_Load_WM"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/4-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Single Door Fridge + Front Load Washing Machine</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1169/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Single_Door_Fridge_plus_Front_Load_WM"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/Appliances/minified/5-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Double Door Fridge + Front Load Washing Machines</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1419/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Double_Door_Fridge_plus_Top_Load_WM"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/1BHK/minified/1-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 1BHK Combo - A</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1110/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_1BHK_Combo_A"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/1BHK/minified/2-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 1BHK Combo - B</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1260/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_1BHK_Combo_B"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/1BHK/minified/3-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 1BHK Combo - C</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1760/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_1BHK_Combo_C"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/1BHK/minified/4-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 1BHK Combo - D</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1873/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_1BHK_Combo_D"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/1BHK/minified/5-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 1BHK Combo - A</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1924/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_1BHK_Combo_A"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/1BHK/minified/6-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 1BHK Combo - B</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.2103/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_1BHK_Combo_B"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/1-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 2BHK Combo - A</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1787/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_2BHK_Combo_A"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/2-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 2BHK Combo - B</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.1937/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_2BHK_Combo_B"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/3-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 2BHK Combo - C</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.2437/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_2BHK_Combo_C"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/4-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 2BHK Combo - D</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.2663/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_2BHK_Combo_D"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/5-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 2BHK Combo - A</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.2765/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_2BHK_Combo_A"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/6-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 2BHK Combo - B</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3123/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_2BHK_Combo_B"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/2BHK/minified/7-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 2BHK Combo - C</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3095/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_2BHK_Combo_C"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/1-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 3BHK Combo - A</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.2613/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_3BHK_Combo_A"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/2-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 3BHK Combo - B</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3113/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_3BHK_Combo_B"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/3-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 3BHK Combo - C</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3443/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_3BHK_Combo_C"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/4-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy 3BHK Combo - D</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3452/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Cowboy_3BHK_Combo_D"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/5-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 3BHK Combo - A</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3605/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_3BHK_Combo_A"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/6-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 3BHK Combo - B</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.4142/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_3BHK_Combo_B"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/combos/images/3BHK/minified/7-min.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux 3BHK Combo - C</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.3935/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="Myrilux_3BHK_Combo_C"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>          
+
+
+<br><br>
+  </div><br>
+</div>
+
+
+</body>
+</html>

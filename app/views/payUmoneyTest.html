@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form method="post" id="payu-payment-form" action="https://secure.payu.in/_payment">
+    <input type="hidden" name="hash" value="e1c0b441df1629d32f906e38ae52d3361265aef7e0bfc2ec6a6ab38fc4642c1ed3004eccf16401a42fb77f8f8a4823ad97daf46f9b28e6a59fc779553a6f6ae0"/>
+    <input type="hidden" name="key" value="pE6ZXlPG"/>
+    <input type="hidden" name="txnid" value="asc123"/>
+    <input type="hidden" name="amount" value="1" />
+    <input type="hidden" name="productinfo" value="Product1"/>
+    <input type="hidden" name="firstname" value="Anupam" />
+    <input type="hidden" name="email" value="anupam.rana2014@vit.ac.in" />
+    <input type="hidden" name="phone" value="9600255848" />
+    <input type="hidden" name="surl" value="http://localhost:3000/payu/success/9600255"/>
+    <input type="hidden" name="furl" value="http://localhost:3000/payu/fail/9600255">
+    <input type="hidden" name="service_provider" value="payu_paisa"/>
+    <button class="" type="submit" formtarget="_blank" >Buy</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://localhost:3000/public/js/jsSHA/src/sha512.js"></script>
+<script>
+
+</script>
+</body>
+</html>

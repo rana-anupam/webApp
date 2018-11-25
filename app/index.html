@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html ng-app="hocketWebsite">
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="public/css/uikit.min.css" />
+        <script src="public/js/uikit.min.js"></script>
+        <script src="public/js/uikit-icons.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Abel|Raleway:300|Muli:300|Montserrat:300" rel="stylesheet">
+        <link href="public/css/nav.css" rel="stylesheet">
+        <link href="public/css/singleProduct.css" rel="stylesheet">
+        <link href="public/css/products_catalogue_page.css" rel="stylesheet">
+        <link href="app/cart/cart.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+  @font-face {
+    font-family: ProximaNovaRegular;
+    src: url(public/fonts/ProximaNovaRegular.ttf);
+}
+*{
+  -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+}
+
+body{
+  -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+}
+.cursorH{
+  cursor:pointer;
+}
+
+
+#loader_wrapper{
+  background: white;
+  width: 100vw;
+  height: 150vh;
+  position: relative;
+  top:0px;
+  left:0px;
+}
+
+
+.loader {
+  left: 50%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  width: 150px;
+}
+.loader .ball {
+  background: #38d368;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  left: 15px;
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: along;
+  -webkit-animation-timing-function: linear;
+}
+.loader .ball2 {
+  background: #508EC3;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  left: 15px;
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: along;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: -1s;
+}
+.loader ul {
+  margin: 0;
+  padding: 0;
+}
+.loader li {
+  background-color: #00bff3;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 30px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: around;
+  -webkit-animation-timing-function: linear;
+}
+.loader li:nth-child(1) {
+  -webkit-animation-delay: 0s;
+}
+.loader li:nth-child(2) {
+  background-color: #82ca9c;
+  -webkit-animation-delay: 0.2s;
+}
+.loader li:nth-child(3) {
+  background-color: #f69679;
+  -webkit-animation-delay: 0.4s;
+}
+.loader li:nth-child(4) {
+  background-color: #acd373;
+  -webkit-animation-delay: 0.6s;
+}
+.loader li:nth-child(5) {
+  background-color: #959595;
+  -webkit-animation-delay: 0.8s;
+}
+
+@-webkit-keyframes around {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes along {
+  0% {
+    left: 0;
+    top: 5px;
+  }
+  5% {
+    top: 3px;
+  }
+  10% {
+    top: 5px;
+  }
+  15% {
+    top: 3px;
+  }
+  20% {
+    top: 5px;
+  }
+  25% {
+    top: 3px;
+  }
+  30% {
+    top: 5px;
+  }
+  35% {
+    top: 3px;
+  }
+  40% {
+    top: 5px;
+  }
+  45% {
+    top: 3px;
+  }
+  50% {
+    left: 100%;
+    top: 5px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+</style>
+</head>
+
+<body unselectable="on" style="overflow-x: hidden;">
+
+<div id="loader_wrapper">
+  <div class="loader">
+      <span class="ball"></span>
+      <span class="ball2"></span>
+      <ul>
+          <li></li><li></li><li></li><li></li><li></li>
+      </ul>
+  </div>
+</div>
+
+<!-- Desktop Navbar Starts -->
+<div ng-controller="navController">
+      <div uk-sticky="sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" id="desktopNavBar">
+          <div class="uk-width-1-1 uk-animation-slide-top-medium" id="top_slip">
+            Offer: Use promocode SAVE20 to get 20% off on your first order.
+          </div>
+
+          <nav class="uk-navbar-container" uk-navbar style="background-color: #ffffff;border-bottom: 1px solid #e0e0e0 ;">
+              <div class="uk-navbar-left ">
+                  <ul class="uk-navbar-nav ">
+                     <li><a class="uk-navbar-item uk-logo" href="#"><img id="nav_logo" src="public/img/name.png"></a>
+                     </li>
+                   </ul>
+                 </div>
+
+              <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav ">
+                      <li class="uk-active ">
+                          <a href="#" class="navbar_elements" style="color:#2d51a3;">
+                           Products <span uk-icon="chevron-down"></span>
+                          </a>
+
+                          <div id="productsDropdown" uk-dropdown="pos: bottom-justify" style="text-align: center;">
+                              <ul class="uk-nav uk-navbar-dropdown-nav" >
+                                  <li class="uk-nav-header" ><a ui-sref="allFurniture" ng-click="hide_productsDropdown()" class="productsList">FURNITURE</a></li>
+                                  <li class="uk-nav-header"><a ui-sref="allAppliances" ng-click="hide_productsDropdown()" href="#" class="productsList">APPLIANCES</a></li>
+                                  <li class="uk-nav-header"><a ui-sref="combos" ng-click="hide_productsDropdown()" href="#" class="productsList">COMBOS</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li class="uk-active ">
+                          <a ui-sref="offers_tnc" class="navbar_elements" style="color:#2d51a3;">
+                           OFFERS
+                          </a>
+                      </li>
+
+                      <li>
+                          <a ui-sref="hocket_home"><span class="nav_hocket_home">Hocket Home<span></a>
+                           <div uk-dropdown="pos: bottom-justify" style="min-width:400px;text-align:center;">
+                                  <ul class="uk-nav uk-dropdown-nav" >
+                                    <li style="color: #2d51a3;font-size:1em;font-family:'Verdana';font-weight:bold"><b>Looking for a budget friendly home?<br>But don't want to burn your pocket?</b></li>
+                                    <li class="uk-active" style="font-family:'Verdana';"> You are at the right place.<br> Its as easy as filling a form and leave the rest to us.</li>
+                                    <li>
+                                      <a ui-sref="hocket_home"><br><span style="color:#fff;font-size:1.1em;background:#2d51a3;padding:5px 10px;">Fill form</span></a>
+                                    </li>
+                                  </ul>
+                              </div>
+                      </li>
+
+                      <li>
+                        <a ng-click="openCart()"> <span uk-tooltip="title: Cart;pos: bottom" id="cartButton" uk-icon="cart" style=""></span>
+                        </a>
+                      </li>
+
+                      <li>
+                          <a href="#"> <span uk-icon="receiver" id="contactButton" style=""></span> </a>
+                           <div uk-dropdown="pos: bottom-justify">
+                                  <ul class="uk-nav uk-dropdown-nav">
+                                    <li class="uk-nav-header" style="color: #2d51a3"><b>Need Help</b></li>
+                                    <li class="uk-active">Contact on:</li>
+                                    <li>+91 96 00 255848</li>
+                                    <li>+91 99 52 551499</li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>( 10AM TO 8PM)</li>
+                                  </ul>
+                              </div>
+                      </li>
+                      <li style="margin-right: 2vw;" ng-if="!user.loggedIn"><a href="#" > <button id="loginButton" ng-click="loginCoverOpen()" class="uk-button uk-button-default" >LogIn</button></a></li>
+                      <li ng-if="user.loggedIn">
+                          <a href="#"> <button id="profileButton" style="padding:3px 10px;border-radius:3px" class="uk-button uk-button-default" > <img class="uk-border-circle" width="35" height="35" src={{user.thumbnail}}> &nbsp {{user.firstName}}</button> </a>
+                          <div uk-dropdown="pos: bottom-justify" style="text-align: center;">
+                              <ul class="uk-nav uk-navbar-dropdown-nav" >
+
+                                  <li class="uk-nav-header" ><a ui-sref="dashboard" class="dashboardItems">Dashboard</a></li>
+                                  <li class="uk-nav-header"><a href="/auth/logout"  class="dashboardItems">Logout</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+        </div>
+<!-- Desktop Navbar Ends -->
+
+
+<!-- Mobile Navbar Starts -->
+
+<div uk-sticky="sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" id="mobileNavBar" style="background-color: white">
+    <div class="uk-width-1-1 uk-animation-slide-top-medium" id="top_slip">
+            Offer: Use promocode SAVE20 to get 20% off on your first order.
+    </div>
+    <div class="uk-container uk-margin-small">
+      <div uk-grid>
+        <div class="uk-width-1-1" style="text-align: center">
+          <span uk-icon="icon: menu; ratio: 1.35" type="button" uk-toggle="target: #offcanvas-slide-menu" style="padding: 6px;position:fixed;left: 6px;"></span>
+          <img src="public/img/name.png" style="width:90px;">
+
+          <span ui-sref="cart" uk-icon="icon: cart; ratio: 1.3" style="padding: 5px;position: fixed;right:6px"></span>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<div id="offcanvas-slide-menu" uk-offcanvas="overlay: true" >
+        <div class="uk-offcanvas-bar" style="background-color: white;overflow: hidden;">
+
+            <button class="uk-offcanvas-close" type="button" uk-close style="color:#212121"></button>
+          <div class="uk-container uk-margin" style="margin-top:50px !important;">
+            <div uk-grid >
+              <div class="uk-width-1-1">
+                <button ng-click="loginCoverOpen()" ng-if="!user.loggedIn" class="uk-button uk-button-primary " uk-toggle="target: #offcanvas-slide-menu" style="background-color:#2d51a3;color:#fff;margin-top: 15px;border:0px solid red; border-radius: 4px;padding-top: 2px;padding-bottom:2px;">LogIn/ Register</button>
+                <a ui-sref="dashboard"><button ng-if="user.loggedIn" class="uk-button uk-button-primary " uk-toggle="target: #offcanvas-slide-menu" style="background-color:#2d51a3;color:#fff;margin-top: 15px;margin-left: 25px;border:0px solid red; border-radius: 4px;padding-top: 2px;padding-bottom:2px;">Dashboard</button></a>
+              </div>
+            </div>
+            <hr>
+            <div uk-grid >
+              <div >
+                <img ui-sref="allFurniture" type="button"  uk-toggle="target: #offcanvas-slide-menu" src="public/img/mobile/furniture.png" style="width:25px;">
+                <span ui-sref="allFurniture" type="button"  uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Furniture</span>
+              </div>
+            </div>
+            <div uk-grid>
+              <div>
+                <img ui-sref="allAppliances" type="button" uk-toggle="target: #offcanvas-slide-menu" src="public/img/mobile/appliances.png" style="width:25px;">
+                <span ui-sref="allAppliances" type="button" uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Appliances</span>
+              </div>
+            </div>
+            <div uk-grid>
+              <div >
+                <img ui-sref="combos" type="button" uk-toggle="target: #offcanvas-slide-menu" src="public/img/mobile/packages.png" style="width:25px;">
+                <span ui-sref="combos" type="button" uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Combos</span>
+              </div>
+            </div>
+            <div uk-grid>
+              <div >
+                <span ui-sref="hocket_home" type="button" uk-toggle="target: #offcanvas-slide-menu" uk-icon="icon:home; ratio: 1.3" style="color:#424242"></span>
+                <span ui-sref="hocket_home" type="button" uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Hocket Home</span>
+              </div>
+            </div>
+            <div uk-grid>
+              <div>
+                <img ui-sref="faq" type="button" uk-toggle="target: #offcanvas-slide-menu" src="public/img/mobile/faq.png" style="width:25px;">
+                <span ui-sref="faq" type="button" uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">F.A.Q</span>
+              </div>
+            </div>
+  <!--           <div uk-grid>
+              <div >
+                <img src="public/img/mobile/rentown.png" style="width:25px;">
+                <span style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Rent to Own</span>
+              </div>
+            </div> -->
+            <div uk-grid>
+              <div>
+                <img ui-sref="offers_tnc" type="button" uk-toggle="target: #offcanvas-slide-menu" src="public/img/mobile/offer_icon.png" style="width:25px;">
+                <span ui-sref="offers_tnc" type="button" uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Offers</span>
+              </div>
+            </div>
+             <div uk-grid >
+              <div>
+                <span ui-sref="contactUs" type="button" uk-toggle="target: #offcanvas-slide-menu" uk-icon="icon:users; ratio: 1.3" style="color:#424242"></span>
+                <span ui-sref="contactUs" type="button" uk-toggle="target: #offcanvas-slide-menu" style="color:#424242;font-family: 'Raleway';font-size: 1.1em;margin-left: 16px;">Contact Us</span>
+              </div>
+            </div>
+            <div uk-grid style="bottom: 0px;text-align:center;width:100%">
+             <div style="width:100%">
+              <button  ng-if="user.loggedIn" ng-click="logoutUser()" class="uk-button uk-button-primary " uk-toggle="target: #offcanvas-slide-menu" style="background-color:#f44336;color:#fff;margin-top: 15px;margin-left: 25px;border:0px solid red; border-radius: 4px;padding-top: 2px;padding-bottom:2px;">LogOut</button>
+             </div>
+           </div>
+          </div>
+
+        </div>
+    </div>
+<!-- Mobile Navbar Ends -->
+    <div id="loginCover">
+        <div class="uk-card uk-card-default loginCard">
+          <div style="text-align:right"><span class="uk-icon-button" uk-icon="close" ng-click="loginCoverClose()" style="background:#f5f5f5"></span></div>
+          <table style="border:0px solid red;width:100%;padding:0px 15px 20px 15px;margin-top:-10px;">
+            <tr style="border:0px solid red;width:100%">
+              <td style="border:0px solid red;width:100%;font-family:'Muli';font-size:1.8em;font-weight:bold;">
+                Login / SignUp
+              </td>
+            </tr>
+            <tr style="border:0px solid red;width:100%">
+              <td style="border:0px solid red;width:100%;font-family:'Muli';font-size:0.92em;padding:10px 15px;">
+                Please login or signup to enter a world of zero commitments.
+              </td>
+            </tr>
+            <tr style="border:0px solid red;width:100%">
+              <td style="border:0px solid red;width:100%;padding:15px">
+                <a href="/auth/google">
+                  <button class="loginBtn loginBtn--google">
+                  Enter with Google
+                  </button>
+              </a>
+              </td>
+            </tr>
+            <tr style="border:0px solid red;width:100%">
+              <td style="border:0px solid red;width:100%;padding:10px">
+                <a href="/auth/facebook">
+                  <button class="loginBtn loginBtn--facebook">
+                    Enter with Facebook
+                  </button>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+</div>
+
+<!-- ****** UI View goes here  ****** -->
+<div ui-view></div>
+<hr>
+
+<!-- Desktop Footer Starts -->
+
+  <div class="uk-container" id="desktopFooter">
+    <div uk-grid style="">
+<!-- _______________ -->
+        <div class="uk-width-1-5">
+          <img style="max-width: 160px;margin-left:3vw; " src="public/img/name.png">
+        </div>
+<!-- _______________ -->
+        <div class="uk-width-1-5" style="font-family: 'ProximaNovaRegular';letter-spacing: 1.5px;padding-left: 50px;padding-top: 10px;font-size: 1em;">
+          <span style="font-size: 1.6em"><b>Categories:</b></span><br>
+          <hr class="uk-divider-small">
+          <p style="margin-top: 10px;margin-bottom: 0px;"><a ui-sref="allFurniture" style="text-decoration:none">Furniture</a></p><br>
+
+          <p style="margin-top: 1px;margin-bottom: 0px;"><a ui-sref="allAppliances" style="text-decoration:none">Appliances</a></p><br />
+          <p style="margin-top: 1px;margin-bottom: 0px;"><a ui-sref="combos" style="text-decoration:none">Combos</a></p>
+        </div>
+<!-- _______________ -->
+        <div class="uk-width-1-5" style="font-family: 'ProximaNovaRegular';letter-spacing: 2px;padding-left: 30px;padding-top: 10px;font-size: 1em">
+          <span style="font-size: 1.6em"><b>Company:</b></span><br>
+          <hr class="uk-divider-small">
+<!--           <p style="margin-top: 10px;margin-bottom: 0px;"><a style="text-decoration:none">Rent to Own</a></p><br> -->
+
+          <p style="margin-top: 1px;margin-bottom: 0px;"><a ui-sref="faq" style="text-decoration:none">F.A.Q</a></p><br />
+          <p style="margin-top: 1px;margin-bottom: 0px;"><a ui-sref="tc" style="text-decoration:none">Terms and Conditions</a></p><br />
+          <p style="margin-top: 1px;margin-bottom: 0px;"><a ui-sref="privacyPolicy" style="text-decoration:none">Privacy Policy</a></p>
+
+        </div>
+<!-- _______________ -->
+
+         <div class="uk-width-1-5" style="font-family: 'ProximaNovaRegular';letter-spacing: 2px;padding-left: 30px;padding-top: 10px;font-size: 1em">
+          <span style="font-size: 1.6em"><b>Know More:</b></span><br>
+          <hr class="uk-divider-small">
+          <p style="margin-top: 10px;margin-bottom: 0px;"><a ui-sref="aboutUs"  style="text-decoration:none">About Us</a></p><br>
+
+          <p style="margin-top: 1px;margin-bottom: 0px;"><a ui-sref="contactUs"  style="text-decoration:none">Contact Us</a></p><br />
+          <!-- <p style="margin-top: 1px;margin-bottom: 0px;"><a style="text-decoration:none">The Team</a></p> -->
+        </div>
+<!-- _______________ -->
+         <div class="uk-width-1-5" style="font-family: 'ProximaNovaRegular';letter-spacing: 2px;padding-left: 15px;padding-top: 10px;font-size: 1em">
+          <span style="font-size: 1.6em"><b>Get in Touch:</b></span><br>
+          <hr class="uk-divider-small">
+          <p style="margin-top: 10px;margin-bottom: 0px;font-size:0.8em"><span style="color:#1e87f0;" uk-icon="phone"></span><a style="font-family: Tahoma"> +91 96 00 255848</a></p><br>
+
+          <p style="margin-top: 1px;margin-bottom: 0px;font-size:0.8em"><span style="color:#1e87f0" uk-icon="mail"></span><a> &nbspsupport@thehocket.com</a></p>
+        </div>
+    </div>
+  </div>
+      <div  style="background-color: #2d51a3;margin-top: 50px;width: 100%" id="desktop_bottomStrip">
+      <div  style="text-align: center;color: #fff;font-size: 0.8em;padding: 0.2em;width: 100% ">
+        © 2018 Hocket Pvt. Ltd.
+      </div>
+    </div>
+
+<!-- Desktop Footer Ends -->
+
+
+<!-- Mobile Footer Starts -->
+
+  <div class="uk-container" id="mobileFooter">
+<!-- _______________ -->
+    <div uk-grid style="">
+        <div class="uk-width-1-1" style="font-size:0.9em;">
+          <img style="max-width: 120px;margin-left:3vw; " src="public/img/name.png">
+          <hr class="uk-divider-small" style="margin-left: 15px;margin-top:4px;margin-bottom:10px;">
+          <span uk-icon="icon: phone; ratio: 1.1" style="margin-left: 10px;padding-top: 15px;color:#2d51a3"></span> &nbsp +91 96 00 255848<br>
+          <span uk-icon="icon: mail; ratio: 1.1" style="margin-left: 12px;padding-top: 15px;color:#2d51a3"></span> &nbsp support@thehocket.com
+          </div><br>
+
+      </div>
+<!-- _______________ -->
+<div uk-grid style="margin-left: 10px; text-align: center;">
+        <div class="uk-width-1-3" style="font-family: 'ProximaNovaRegular';letter-spacing: 1.5px;padding-left: 5px;padding-top: 10px;font-size: 0.8em;">
+          <span style="font-size: 1em"><b>Categories:</b></span><br>
+          <hr class="uk-divider-small" style="margin-top:8px">
+          <p style="margin-top: -5px;margin-bottom: 0px;"><a ui-sref="allFurniture" style="text-decoration:none">Furniture</a></p><br>
+
+          <p style="margin-top: -6px;margin-bottom: 0px;"><a ui-sref="allAppliances" style="text-decoration:none">Appliances</a></p><br />
+          <p style="margin-top: -6px;margin-bottom: 0px;"><a ui-sref="combos" style="text-decoration:none">Combos</a></p>
+        </div>
+<!-- _______________ -->
+        <div class="uk-width-1-3" style="font-family: 'ProximaNovaRegular';letter-spacing: 2px;padding-left: 5px;padding-top: 10px;font-size: 0.8em">
+          <span style="font-size: 1em"><b>About:</b></span><br>
+          <hr class="uk-divider-small" style="margin-top:8px">
+          <!-- <p style="margin-top: -5px;margin-bottom: 0px;"><a style="text-decoration:none">Rent to Own</a></p><br> -->
+
+          <p style="margin-top: -6px;margin-bottom: 0px;"><a ui-sref="faq" style="text-decoration:none">F.A.Q</a></p><br />
+          <p style="margin-top: -6px;margin-bottom: 0px;"><a ui-sref="tc" style="text-decoration:none">T&C</a></p><br />
+          <p style="margin-top: -6px;margin-bottom: 0px;"><a ui-sref="privacyPolicy" style="text-decoration:none">Privacy Policy</a></p>
+
+        </div>
+<!-- _______________ -->
+
+         <div class="uk-width-1-3" style="font-family: 'ProximaNovaRegular';letter-spacing: 2px;padding-left: 5px;padding-top: 10px;font-size: 0.8em">
+          <span style="font-size: 1em"><b>Company:</b></span><br>
+          <hr class="uk-divider-small" style="margin-top:8px">
+          <p style="margin-top: -5px;margin-bottom: 0px;"><a ui-sref="aboutUs" style="text-decoration:none">About Us</a></p><br>
+
+          <p style="margin-top: -6px;margin-bottom: 0px;"><a ui-sref="contactUs" style="text-decoration:none">Contact Us</a></p><br />
+          <!-- <p style="margin-top: 1px;margin-bottom: 0px;"><a style="text-decoration:none">The Team</a></p> -->
+        </div>
+
+    </div>
+  </div>
+        <div uk-grid style="background-color: #2d51a3;margin-top: 50px;" id="mobile_bottomStrip">
+      <div class="uk-width-1-1" style="text-align: center;color: #fff;font-size: 0.8em;padding: 0.2em; ">
+        © 2018 Hocket Pvt. Ltd.
+      </div>
+    </div>
+
+<!-- Mobile Footer Ends -->
+
+
+<!-- Node modules dependencies -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/moment/moment.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+
+<!-- js libraries -->
+<script src="public/js/jquery-visible-master/jquery.visible.js"></script>
+<script src="public/js/angular-ui-router.min.js"></script>
+<script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+<script src="node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
+<script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+
+<!-- angular controllers -->
+<script src="app/app.js"></script> <!-- Main angular Module config -->
+<script src="app/navController.js"></script>
+<script src="app/home/homeController.js"></script>
+<script src="app/all_products/productsController.js"></script>
+<script src="app/allFurniture/allFurnitureController.js"></script>
+<script src="app/allAppliances/allAppliancesController.js"></script>
+<script src="app/combos/combosController.js"></script>
+<script src="app/faq/faqController.js"></script>
+<script src="app/tc/tcController.js"></script>
+<script src="app/privacyPolicy/privacyPolicyController.js"></script>
+<script src="app/aboutUs/aboutUsController.js"></script>
+<script src="app/contactUs/contactUsController.js"></script>
+<script src="app/cart/cartController.js"></script>
+<script src="app/dashboard/dashboardController.js"></script>
+<script src="app/offers_tnc/offers_tnc_Contoller.js"></script>
+<script src="app/hocket_home/hocket_homeController.js"></script>
+
+
+
+<script src="app/appliances/appliancesController.js"></script>
+<script src="app/beds/bedsController.js"></script>
+<script src="app/furniture/furnitureController.js"></script>
+
+</body>
+</html>

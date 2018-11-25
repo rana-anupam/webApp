@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+
+.tncBanner{
+  font-size: 2.8em;
+  padding: 45px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #2d51a3, #1e87f0);
+  color: white;font-family: 'Muli';
+}
+
+#tncContent{
+  padding: 50px 110px;
+  font-family:'Muli';
+  font-size:0.92em;
+  text-align: justify;
+}
+
+.hocketHomeCardContent{
+  padding: 10px ;
+  text-align: center;
+  color:#000;
+  font-family:'Raleway';
+  background:#fff;
+}
+
+.formHeader{
+  text-align: center;
+  width:100%;
+  margin-top:70px;
+  font-size:1.7em;
+  color:#2d51a3;
+  font-family: Verdana;
+}
+
+
+
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+#desktopSubNav{
+  display: none;
+}
+
+#mobileSubNav{
+  display: block;
+}
+
+.tncBanner{
+  font-size: 1.8em;
+  padding: 35px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #2d51a3, #1e87f0);
+  color: white;font-family: 'Muli';
+}
+
+#tncContent{
+  padding: 20px;
+  font-family:'Muli';
+  font-size:0.92em;
+  text-align: justify;
+}
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+</style>
+</head>
+
+<body>
+
+<div class="tncBanner">
+  Hocket Home
+</div>
+
+<div id="tncContent" >
+
+  <div class="uk-child-width-1-4@m" uk-grid>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/a.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>Your search for perfect home ends at Hocket home.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/b.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>Move in and vacate just like you do in a hotel.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/c.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>We take care of your external burdens so that you can focus  on what matters you the most.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/d.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>Hocket home offers rooms and houses at prices that no other player in the budget segment offers today and that too at 0 brokerage.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/e.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>Home service is just a call away at hocket homes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/f.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>You can now proudly invite your friends to your beautiful hocket homes and showoff.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/g.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>We help you getting awesome flatmates.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="./app/hocket_home/Posters/h.png" alt="">
+            </div>
+            <div class="hocketHomeCardContent ">
+                <p>We don’t differentiate between humans and animals.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<hr style="width: 100%">
+    <div class="formHeader">
+      Just fill the below form to get started:
+    </div>
+
+<div style="margin-top: 50px;">
+  <form class="uk-grid-small" uk-grid>
+      <div class="uk-width-1-4@s">
+          <label class="uk-form-label" for="form-stacked-text" >Name:</label>
+          <div class="uk-form-controls">
+              <input class="uk-input" id="form-stacked-text" type="text" ng-model="message.name" placeholder="Please enter your name" required>
+          </div>
+      </div>
+      <div class="uk-width-1-4@s">
+          <label class="uk-form-label" for="form-stacked-text">Age:</label>
+          <div class="uk-form-controls">
+              <input class="uk-input" id="form-stacked-text" type="number" min="0" max="100" step="1" ng-model="message.age" placeholder="What's your age?"  required>
+          </div>
+      </div>
+      <div class="uk-width-1-4@s">
+          <label class="uk-form-label" for="form-horizontal-select">Gender:</label>
+          <div class="uk-form-controls">
+              <select class="uk-select" ng-model="message.gender" id="form-horizontal-select"  required>
+                  <option>Male</option>
+                  <option>Female</option>
+              </select>
+          </div>
+      </div>
+      <div class="uk-width-1-4@s">
+          <label class="uk-form-label" for="form-stacked-text">Contact No.:</label>
+          <div class="uk-form-controls">
+              <input class="uk-input" id="form-stacked-text" ng-model="message.contact" type="number" placeholder="Your contact no. please" min="6000000000" max="9999999999" step="1"  required>
+          </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+        BHK required:
+          <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" style="margin-top:10px;">
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.BHK.bhk1" checked> 1 BHK &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.BHK.bhk2" checked> 2 BHK &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.BHK.bhk3"> 3 BHK &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.BHK.bhk4"> 4 BHK</label>   
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.BHK.bhk4p"> 4 BHK+</label>
+        </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+        Property type:
+          <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" style="margin-top:10px;">
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.poptype.apartment" checked> Apartment &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.poptype.independentHouse"> Independent House/ Villa &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.poptype.studioHouse"> Studio House &nbsp</label>
+        </div>
+      </div>
+
+      <div class="uk-width-1-2@s" class="form_input_wrapper" style="margin-top: 40px;">
+        Furnishing:
+          <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" style="margin-top:10px;">
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.furnish.unFurinshed" checked> Unfurinshed &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.furnish.semiFurinshed" checked> Semi Furnished &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.furnish.fullFurinshed"> Fully Furnished </label>
+        </div>
+      </div>
+
+      <div class="uk-width-1-4@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-horizontal-select">Lease type?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+              <select class="uk-select" ng-model="message.leaseType" id="form-horizontal-select">
+                  <option>Bachelor</option>
+                  <option>Family</option>
+                  <option>Company</option>
+              </select>
+          </div>
+      </div>
+
+      <div class="uk-width-1-4@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-horizontal-select">No. of people shifting?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+              <select class="uk-select" ng-model="message.noOfPeople" id="form-horizontal-select">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>8+</option>
+              </select>
+          </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-horizontal-select">Within how many days are you planning to shift?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+              <select class="uk-select" ng-model="message.expectedShifting" id="form-horizontal-select">
+                  <option>Within a week</option>
+                  <option>Within 15 days</option>
+                  <option>Within a month</option>
+                  <option>Within 2 months</option>
+                  <option>Within 3 months</option>
+                  <option>Not yet decided</option>
+              </select>
+          </div>
+      </div>
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-horizontal-select">Tentative renting period?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+              <select class="uk-select" ng-model="message.tentativeTenure" id="form-horizontal-select">
+                  <option>1 to 6 months</option>
+                  <option>6 to 12 months</option>
+                  <option>12 to 18 months</option>
+                  <option>18 to 24 months</option>
+                  <option> 24 months+ </option>
+              </select>
+          </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-stacked-text">Budget Range?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+            <textarea class="uk-textarea" rows="3" placeholder="Please provide your budget. Also if you have different budgets for different propery types (Semi furnished budget, fully furnished budget, etc..) the, please let us know." ng-model="message.budgetRange"></textarea>
+          </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-stacked-text">Prefered areas/locations and societies?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+            <textarea class="uk-textarea" rows="3" placeholder="Please tell us your prefered area/locations. Also if you have any specific society then please let us know." ng-model="message.preferedLocation"></textarea>
+          </div>
+      </div>
+
+      <div class="uk-width-1-3@s" style="margin-top: 40px;">
+          Do you specifically want in a gated society?
+          <div class="uk-form-controls" style="margin-top:10px;">
+            <label><input class="uk-radio" type="radio" name="radio1" ng-model="message.gated.Yes"> Yes</label>
+            <label><input class="uk-radio" type="radio" name="radio1" ng-model="message.gated.No" checked> No</label>
+          </div>
+      </div>
+
+      <div class="uk-width-1-3@s" style="margin-top: 40px;">
+          Will you be looking for home service?
+          <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" style="margin-top:10px;">
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.homeservice.maid" > Maid &nbsp</label>
+            <label><input class="uk-checkbox" type="checkbox" ng-model="message.homeservice.cook"> Cook &nbsp</label>
+        </div>
+      </div>
+      <div class="uk-width-1-3@s" style="margin-top: 40px;">
+          Are you going to keep a pet?
+          <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" style="margin-top:10px;">
+            <label><input class="uk-radio" type="radio" name="radio2" ng-model="message.petYes"> Yes</label>
+            <label><input class="uk-radio" type="radio" name="radio2" ng-model="message.petNo" checked> No</label>
+        </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-stacked-text">Are you looking for a flatmate?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+            <textarea class="uk-textarea" rows="4" placeholder="If you are planning to divide the rent amoung 4 members but have not found other 1 or 2. No Problem. We will help you in finding the perfect flatmate/roommate for you. Just let us know how many flatmates/roommates are you looking for along with preferences, if any?" ng-model="message.lookingFlatmate"></textarea>
+          </div>
+      </div>
+
+      <div class="uk-width-1-2@s" style="margin-top: 40px;">
+          <label class="uk-form-label" for="form-stacked-text">Any other information you would like to tell us?</label>
+          <div class="uk-form-controls" style="margin-top:10px;">
+            <textarea class="uk-textarea" rows="4" placeholder="Speak out your heart." ng-model="message.heart"></textarea>
+          </div>
+      </div>     
+
+  </form>
+</div>
+
+<div style="margin-top:50px;text-align: center">
+  <button class="uk-button uk-button-primary" ng-click="submitForm()">Submit</button>
+</div>
+
+</body>
+</html>

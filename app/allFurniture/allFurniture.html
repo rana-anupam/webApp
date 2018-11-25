@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+#desktopSubNav{
+  display: none;
+}
+
+#mobileSubNav{
+  display: block;
+}
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+</style>
+</head>
+
+<body>
+
+<div id="desktopSubNav">
+	<table style="width: 100%;font-family: 'Muli', sans-serif;font-size: 1em;">
+		<tr>
+			<td style="width: 60%;padding-left: 5vw;padding-top: 25px;padding-bottom: 25px;border-bottom:1px solid #e0e0e0;font-size: 1.1em">
+				<span ui-sref="products" style="font-weight:bold">Products</span> > Furniture
+			</td>
+			<td ui-sref="allFurniture" style="text-align: center;padding: 25px;border-bottom: 2px solid #2d51a3;">
+				Furniture
+			</td>
+			<td ui-sref="allAppliances" style="text-align: center;;padding: 25px;border-bottom:1px solid #e0e0e0">
+				Appliances
+			</td>
+			<td ui-sref="combos" style="text-align: center;padding: 25px;border-bottom:1px solid #e0e0e0">
+				Combos
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div id="mobileSubNav">
+  <table style="width: 100%;font-family: 'Muli', sans-serif;font-size: 1em;">
+    <tr style="width:100%">
+      <td ui-sref="allFurniture" style="text-align: center;padding: 25px;border-bottom: 2px solid #2d51a3;">
+        Furniture
+      </td>
+      <td ui-sref="allAppliances" style="text-align: center;;padding: 25px;border-bottom:1px solid #e0e0e0">
+        Appliances
+      </td>
+      <td ui-sref="combos" style="text-align: center;padding: 25px;border-bottom:1px solid #e0e0e0">
+        Combos
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div class="uk-container" style="margin-top: 60px">
+  <div class="uk-child-width-1-4@m" uk-grid>
+
+
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/khal/khal_queen_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Khal Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.397/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'khal_double_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/joan/joan_queen_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Joan Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.397/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'joan_double_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/sansa/sansa_queen_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Sansa Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.397/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'sansa_double_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/cowboy/cowboy_single_light_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy Bedroom - Single</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.238/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'cowboy_single_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/cowboy/cowboy_double_light_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Cowboy Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.397/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'cowboy_double_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/myrilux/myrilux_single_light_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux Bedroom - Single</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.353/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'myrilux_single_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/myrilux/myrilux_double_light_prime.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Myrilux Bedroom - Double</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="beds({id:'myrilux_double_bedroom'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/bronn/bronn_six.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Bronn 6 Seater Dining Set</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'bronn_6_seater_dining_set'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/jaime/jaime_sofa_311seater_blue.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Jaime 5 Seater Sofa Set</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'jaime_5_seater_sofa_set'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/jaime/jaime_sofa_003seater_blue.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Jaime 3 Seater Sofa </span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'jaime_3_seater_sofa'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/jaime/jaime_sofa_001seater_blue.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Jaime 1 Seater Sofa </span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'jaime_1_seater_sofa'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/tyrion/tyrion_sofa_311seater_grey.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Tyrion 5 Seater Sofa Set</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'tyrion_5_seater_sofa_set'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/tyrion/tyrion_sofa_003seater_grey.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Tyrion 3 Seater Sofa</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'tyrion_3_seater_sofa'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/tyrion/tyrion_sofa_001seater_grey.png" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Tyrion 1 Seater Sofa</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'tyrion_1_seater_sofa'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/arya/arya_dressingTable.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Arya Dressing Table</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'arya_dressing_table'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/lannister/lannister_sideTable.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Lannister Side Table</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'lannister_side_table'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/euron/euron_2door_withoutMirror.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Euron 2 Door Wardrobe</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'euron_2_door_wardrobe'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/euron/euron_3door_withoutMirror.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Euron 3 Door Wardrobe</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'euron_3_door_wardrobe'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+      <div>
+          <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                  <img src="./app/single_products/furniture/rhaegal/rhaegal_beanBag.jpg" alt="">
+              </div>
+              <div class="products_card_wrapper">
+                  <p> <span class="products_card_heading">Rhaegal Bean Bag</span>
+                  <hr>
+                  <span style="font-weight: bold">Starts at Rs.561/mo</span>
+                  </p>
+                  <div style="width:100%;text-align:center;">
+                    <a ui-sref="furniture({id:'rhaegal_bean_bag'})"><button class="uk-button uk-button-default">Explore</button></a>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+      
+
+      <hr style="width:100%">
+
+
+
+<br><br>
+  </div><br>
+</div>
+
+
+</body>
+</html>

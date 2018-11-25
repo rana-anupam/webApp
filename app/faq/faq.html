@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hocket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+
+/*Products CSS*/
+#desktopSubNav{
+  display: block;
+}
+
+#mobileSubNav{
+  display: none;
+}
+
+.faqHeading{
+  font-size:1.05em;
+  font-weight:bold;
+}
+
+.faqContent{
+  font-size:0.9em;
+}
+
+.faqBanner{
+  font-size: 2.5em;
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #2d51a3, #1e87f0);
+  color: white;font-family: 'Muli';
+}
+
+#faqDesktop{
+  display: block;
+}
+
+#faqMobile{
+  display: none;
+}
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+#desktopSubNav{
+  display: none;
+}
+
+#mobileSubNav{
+  display: block;
+}
+
+.faqBanner{
+  font-size: 1.8em;
+  padding: 35px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #2d51a3, #1e87f0);
+  color: white;font-family: 'Muli';
+}
+
+#faqDesktop{
+  display: none;
+}
+
+#faqMobile{
+  display: block;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+</style>
+
+</head>
+<body id="faqTop">
+
+<div class="faqBanner" >
+  Frequently Asked Questions
+</div>
+
+    <div class="uk-container" id="faqDesktop">
+      <div class="uk-child-width-1-1@s" uk-grid style="margin-top:30px;padding: 60px;border:0px solid red">
+        <p><span style="font-family: 'ProximaNovaRegular';font-size:1.8em;font-weight:bold">Frequently Asked Questions</span>
+        <br>
+        <span>Got a question or a doubt? We’ve got the answers right here.</span></p>
+        <div >
+            <div uk-grid>
+                <div class="uk-width-auto@m">
+                  <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade" >
+                    <li style="padding:15px;"><a href="#" style="font-size:1.05em">How it works?</a></li>
+                    <li style="padding:15px;"><a href="#" style="font-size:1.05em">Delievery and installation</a></li>
+                    <li style="padding:15px;"><a href="#" style="font-size:1.05em">Rental process and tenure</a></li>
+                    <li style="padding:15px;"><a href="#" style="font-size:1.05em">Refunds and returns</a></li>
+                  </ul>
+                </div>
+                <div class="uk-width-expand@m" style="font-family: 'Muli'">
+                    <ul id="component-tab-left" class="uk-switcher">
+                      <li>
+                          <span  class="faqHeading">1. What is Hocket?</span>
+                          <br>
+                          <span class="faqContent">
+                            We’re an online rental company and we’re here to offer you easy access to a smarter &better lifestyle. Our services let you rent lifestyle essentials at affordable prices. Renting is IN, and you too can join the revolution by making the smart choice with Hocket.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. Where do you guys operate?</span>
+                          <br>
+                          <span class="faqContent">
+                            We’re currently operational only in Bangalore.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">3. Is there any minimum period of renting the furniture and appliances?</span>
+                          <br>
+                          <span class="faqContent">
+                            Yes, there is a minimum renting period of 1 months. The period can be extended further by contacting our customer care team 2 weeks prior to the end of the contract. We don't charge anything for contract extension. For more information on the same, you can contact our customer care. We are always happy to help you :)
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">4. Why do I have to a pay deposit for the furniture?</span>
+                          <br>
+                          <span class="faqContent">
+                            On booking confirmation, a fixed minimal amount is collected as a security deposit. However, this is fully refundable to the customers if the products are returned in a good condition.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">5. I am a house owner, how can I benefit from these plans?</span>
+                          <br>
+                          <span class="faqContent">
+                            Furnished apartments demand a premium when compared to unfurnished. If you want to turn your unfurnished apartment into a Furnished one without spending much,choose one or more of our packages.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">6. Can I purchase the furniture?</span>
+                          <br>
+                          <span class="faqContent">
+                            This is a rental offering and therefore, you can not purchase the products. However, if you wish to extend the rental contract or upgrade, we are happy to serve you.
+                          </span>
+
+                      </li>
+
+                      <li>
+                          <span  class="faqHeading">1. Do I have to pay for delivery and installation?</span>
+                          <br>
+                          <span class="faqContent">
+                            Not at all. That's right! we deliver, pick up and install the products absolutely free of cost and as per your schedule. Our delivery staff will discuss with you, placement of the products as per your preference and install accordingly. In case delivery has to be made at a location without an elevator, there will be a nominal labour fee charged to convey the products which will be collected in cash at the time of delivery; the amount will vary basis order size and floor level.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. What is the delivery time of the order?</span>
+                          <br>
+                          <span class="faqContent">
+                            Document verification can take up to 3 days from the date of the document submission, depending on the comprehensiveness of the documents submitted. Post the document verification we usually take 48-72 hours to deliver the order. This might vary on the required documents on a case by case basis.
+                          </span>
+                      </li>
+
+                      <li>
+                        <span  class="faqHeading">1. How do I learn more about a product?</span>
+                          <br>
+                          <span class="faqContent">
+                            In case you have questions about a product, please write to our customer care and we will get back to you within 24 hours. You can also call  us between 10 AM to 8PM on our customer care number - +91 96 00 255848.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. How do I pay my deposit and rent?</span>
+                          <br>
+                          <span class="faqContent">
+                            Payments are super convenient with Hocket, you can pay through your Hocket dashboard. For your monthly rent, we will send a link on your registered email id and you can pay through your dashboard.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">3. What is the rental value I pay and when do I pay it?</span>
+                          <br>
+                          <span class="faqContent">
+                            Its simple! Select the products you like and you will see the total rental value in your cart. Rent is due on completiion of 30 days cycle. In billing cycle one month is considered as 30 days.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">4. Is there any contract? What are the terms?</span>
+                          <br>
+                          <span class="faqContent">
+                            We have a simple contract that you need to sign when the products arrive at your home. Contract includes basic terms of renting, payment, refund and damage policy. 
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">5. What documents are required to get into the contract?</span>
+                          <br>
+                          <span class="faqContent">
+                            For our easy KYC process we require the below mentioned documents at the time of signing the contract:
+                          <ul>
+                            <li>Photo ID proof(any one): Passport/PAN Card / Driving License / Aadhar Card.</li>
+                            <li>Address proof (Any one) : House rental agreement / Address proof on company letterhead / Govt. issued proof / Bank Statement</li>
+                            <li>NOC from the owner if you are living in rented house.</li>
+                            Yes, the document submission is mandatory. Rest assured, your details are safe with us :)
+                          </ul>
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">6. What are the available modes of payment?</span>
+                          <br>
+                          <span class="faqContent">
+                            You can pay us through net banking/credit card/debit card/payment wallet.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">7. What if I damage the furniture?</span>
+                          <br>
+                          <span class="faqContent">
+                            Damage which makes the furniture functionally unusable is chargeable. The amount will be decided by Hocket on a case to case basis. Normal wear and tear which does not cause functional damage to the products due to usage is absolutely free.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">8. In case I’m moving, is there a relocation cost to move your products?</span>
+                          <br>
+                          <span class="faqContent">
+                            During the tenure of contract if you are relocating within the same city, we will relocate the rented products from Hocket free of cost. Just inform us 7 days and we will close your order and deliver the same products at your new location.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">9. What happens if I want an early termination or extension of my tenure?</span>
+                          <br>
+                          <span class="faqContent">
+                            You can request for early termination of the contract by informing us 2 weeks prior to your preferred closure date. You would need to pay the difference in monthly rental rates between your 'Contract tenure' (the tenure selected at order placement) and 'Actual tenure' (effective tenure at early closure). The amount due will be calculated as: (Actual tenure rent - Contract tenure rent) * No. of months of actual tenure. The applicable tenure rates for early closure are:
+                            <ul>
+                            <li>Upto 3 month's: Full 3 month's rental due</li>
+                            <li>3-6 month's: 3 month's rental rate</li>
+                            <li>6-9 month's: 6 month's rental rate</li>
+                            <li>9-12 month's: 9 month's rental rate</li>
+                            <li>12-18th month's: 12 month's rental rate</li>
+                            <li>18-24 month's: 18 month's rental rate</li>
+                             </ul>
+                            Similarly, the contract for your order/one or more items from the order can be extended for the desired period by notifying us 2 weeks prior to the end of the contract.
+                          </span>
+                      </li>
+
+                      <li>
+                        <span  class="faqHeading">1. What happens when my lease expires?</span>
+                          <br>
+                          <span class="faqContent">
+                            We will call you one week prior to the scheduled end date of the contract to fix the pick-up date and time. If you choose to keep your furniture for longer than the agreed tenure or return it before the agreed date due to some reasons, you can mail us one week in advance. The pick up of the products is absolutely free.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. When do I get my deposit back?</span>
+                          <br>
+                          <span class="faqContent">
+                            We will pick up the products on the completion of your rental tenure, and upon successful Quality Check, we will immediately initiate the refund of your security deposit to your registered bank account in 5 working days. No interest is paid on the deposit amount.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">3. What is the return policy?</span>
+                          <br>
+                          <span class="faqContent">
+                            In an unlikely situation of damaged furniture arriving at your doorstep but if it is damaged, we won't ask any questions and take the furniture back with us.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">4. What if I don't like the product at the time of delivery?</span>
+                          <br>
+                          <span class="faqContent">
+                            We make sure all the products are new or almost new when they reach without compromise on quality. There are a series of stringent quality checks that are undertaken on every piece of furniture before delivery. However, if you don’t like the products at the time of delivery - there will be no questions asked. Love it or return it!
+                          </span>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <div id="faqMobile" style="padding:20px;">
+
+      <span style="font-size:1.5em;color:#2d51a3">How it works?</span>
+      <br>
+      <span  class="faqHeading">1. What is Hocket?</span>
+                          <br>
+                          <span class="faqContent">
+                            We’re an online rental company and we’re here to offer you easy access to a smarter &better lifestyle. Our services let you rent lifestyle essentials  at affordable prices. Renting is IN, and you too can join the revolution by making the smart choice with Hocket.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. Where do you guys operate?</span>
+                          <br>
+                          <span class="faqContent">
+                            We’re currently operational only in Bangalore.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">3. Is there any minimum period of renting the furniture and appliances?</span>
+                          <br>
+                          <span class="faqContent">
+                            Yes, there is a minimum renting period of 1 month. The period can be extended further by contacting our customer care team 2 weeks prior to the end of the contract. We don't charge anything for contract extension. For more information on the same, you can contact our customer care. We are always happy to help you :)
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">4. Why do I have to a pay deposit for the furniture?</span>
+                          <br>
+                          <span class="faqContent">
+                            On booking confirmation, a fixed minimal amount is collected as a security deposit. However, this is fully refundable to the customers if the products are returned in a good condition.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">5. I am a house owner, how can I benefit from these plans?</span>
+                          <br>
+                          <span class="faqContent">
+                            Furnished apartments demand a premium when compared to unfurnished. If you want to turn your unfurnished apartment into a Furnished one without spending much,choose one or more of our packages.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">6. Can I purchase the furniture?</span>
+                          <br>
+                          <span class="faqContent">
+                            This is a rental offering and therefore, you can not purchase the products. However, if you wish to extend the rental contract or upgrade, we are happy to serve you.
+                          </span>
+      <br><br>
+      <span style="font-size:1.5em;color:#2d51a3">Delievery and installation</span>
+      <br>
+                          <span  class="faqHeading">1. Do I have to pay for delivery and installation?</span>
+                          <br>
+                          <span class="faqContent">
+                            Not at all. That's right! we deliver, pick up and install the products absolutely free of cost and as per your schedule. Our delivery staff will discuss with you, placement of the products as per your preference and install accordingly. In case delivery has to be made at a location without an elevator, there will be a nominal labour fee charged to convey the products which will be collected in cash at the time of delivery; the amount will vary basis order size and floor level.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. What is the delivery time of the order?</span>
+                          <br>
+                          <span class="faqContent">
+                            Document verification can take up to 3 days from the date of the document submission, depending on the comprehensiveness of the documents submitted. Post the document verification we usually take 48-72 hours to deliver the order. This might vary on the required documents on a case by case basis.
+                          </span>
+
+      <br><br>
+      <span style="font-size:1.5em;color:#2d51a3">Rental process and tenure</span>
+      <br>
+                          <span  class="faqHeading">1. How do I learn more about a product?</span>
+                          <br>
+                          <span class="faqContent">
+                            In case you have questions about a product, please write to our customer care and we will get back to you within 24 hours. You can also chat with us between 10 AM to 8PM on our website by using the chat option.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. How do I pay my deposit and rent?</span>
+                          <br>
+                          <span class="faqContent">
+                            Payments are super convenient with Hocket, you can pay through your Hocket dashboard. For your monthly rent, we will send a link on your registered email id and you can pay through your dashboard.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">3. What is the rental value I pay and when do I pay it?</span>
+                          <br>
+                          <span class="faqContent">
+                            Its simple! Select the products you like and you will see the total rental value in your cart. Rent is due on completiion of 30 days cycle. In billing cycle one month is considered as 30 days.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">4. Is there any contract? What are the terms?</span>
+                          <br>
+                          <span class="faqContent">
+                            We have a simple contract that you need to sign when the products arrive at your home. Contract includes basic terms of renting, payment, refund and damage policy. You can read more about it here
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">5. What documents are required to get into the contract?</span>
+                          <br>
+                          <span class="faqContent">
+                            For our easy KYC process we require the below mentioned documents at the time of signing the contract:
+                          <ul>
+                            <li>Photo ID proof(any one): Passport/PAN Card / Driving License / Aadhar Card.</li>
+                            <li>Address proof (Any one) : House rental agreement / Address proof on company letterhead / Govt. issued proof / Bank Statement</li>
+                            <li>NOC from the owner if you are living in rented house.</li>
+                            Yes, the document submission is mandatory. Rest assured, your details are safe with us :)
+                          </ul>
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">6. What are the available modes of payment?</span>
+                          <br>
+                          <span class="faqContent">
+                            You can pay us through net banking/credit card/debit card/payment wallet.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">7. What if I damage the furniture?</span>
+                          <br>
+                          <span class="faqContent">
+                            Damage which makes the furniture functionally unusable is chargeable. The amount will be decided by Hocket on a case to case basis. Normal wear and tear which does not cause functional damage to the products due to usage is absolutely free .
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">8. In case I’m moving, is there a relocation cost to move your products?</span>
+                          <br>
+                          <span class="faqContent">
+                            During the tenure of contract if you are relocating within the same city, we will relocate the rented products from Hocket free of cost. Just inform us 7 days and we will close your order and deliver the same products at your new location.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">9. What happens if I want an early termination or extension of my tenure?</span>
+                          <br>
+                          <span class="faqContent">
+                            You can request for early termination of the contract by informing us 2 weeks prior to your preferred closure date. You would need to pay the difference in monthly rental rates between your 'Contract tenure' (the tenure selected at order placement) and 'Actual tenure' (effective tenure at early closure). The amount due will be calculated as: (Actual tenure rent - Contract tenure rent) * No. of months of actual tenure. The applicable tenure rates for early closure are:
+                            <ul>
+                            <li>Upto 3 month's: Full 3 month's rental due</li>
+                            <li>3-6 month's: 3 month's rental rate</li>
+                            <li>6-9 month's: 6 month's rental rate</li>
+                            <li>9-12 month's: 9 month's rental rate</li>
+                            <li>12-18th month's: 12 month's rental rate</li>
+                            <li>18-24 month's: 18 month's rental rate</li>
+                             </ul>
+                            Similarly, the contract for your order/one or more items from the order can be extended for the desired period by notifying us 2 weeks prior to the end of the contract.
+                          </span>
+        <br><br>
+      <span style="font-size:1.5em;color:#2d51a3">Refunds and returns</span>
+      <br>
+                          <span  class="faqHeading">1. What happens when my lease expires?</span>
+                          <br>
+                          <span class="faqContent">
+                            We will call you one week prior to the scheduled end date of the contract to fix the pick-up date and time. If you choose to keep your furniture for longer than the agreed tenure or return it before the agreed date due to some reasons, you can mail us one week in advance. The pick up of the products is absolutely free.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">2. When do I get my deposit back?</span>
+                          <br>
+                          <span class="faqContent">
+                            We will pick up the products on the completion of your rental tenure, and upon successful Quality Check, we will immediately initiate the refund of your security deposit to your registered bank account in 5 working days. No interest is paid on the deposit amount.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">3. What is the return policy?</span>
+                          <br>
+                          <span class="faqContent">
+                            In an unlikely situation of damaged furniture arriving at your doorstep but if it is damaged, we won't ask any questions and take the furniture back with us. You can read more about it following this here.
+                          </span>
+
+                          <br><br>
+                          <span  class="faqHeading">4. What if I don't like the product at the time of delivery?</span>
+                          <br>
+                          <span class="faqContent">
+                            We make sure all the products are new or almost new when they reach without compromise on quality. There are a series of stringent quality checks that are undertaken on every piece of furniture before delivery. However, if you don’t like the products at the time of delivery - there will be no questions asked. Love it or return it!
+                          </span>
+  </div>
+
+</body>
+</html>

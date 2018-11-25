@@ -1,0 +1,89 @@
+/*NavBar CSS*/
+
+        #top_slip{
+          text-align: center;
+          color:white;
+          background-color:#2d51a3;
+          font-size: 0.8em;
+          padding: 0.2em;
+        }
+
+        #cartButton{
+          border:1px solid #2d51a3;
+          border-radius:50%;
+          padding:10px;
+          color:#2d51a3;
+          background-color: #fff;
+        }
+
+        #cartButton:hover{
+          border:1px solid #2d51a3;
+          border-radius:50%;
+          padding:10px;
+          background-color:#2d51a3;
+          color:#fff;
+        }
+
+        #loginButton{
+          border:1px solid #2d51a3;
+          color:#2d51a3;
+          background-color: #ffffff;
+        }
+
+        #loginButton:hover{
+          background-color:#2d51a3;
+          color:#fff;
+          font-family: 'Raleway', sans-serif;
+        }
+
+        #contactButton{
+          border:1px solid #2d51a3;
+          border-radius:50%;
+          padding:10px;
+          color:#2d51a3;
+          background-color: #ffffff;
+        }
+        #contactButton:hover{
+          background-color:#2d51a3;
+          color:#fff;
+        }
+
+        .uk-nav-header .productsList{
+          color:#2d51a3;
+          background-color: #fff;
+          padding:15px;
+          letter-spacing: 1.3px;
+        }
+
+        .uk-nav-header .productsList:hover{
+          color:#fff;
+          background-color: #2d51a3;
+        }
+
+        #nav_logo{
+          max-width: 150px;margin-left:5vw; 
+        }
+
+        .navbar_elements{
+          font-size: 17px;
+          color:#2d51a3;
+          font-family: 'Raleway', sans-serif;
+          margin-top: 3px;
+        }
+
+
+/*Media Queries Start*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+*/
+
+
+
+
