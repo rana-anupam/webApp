@@ -348,22 +348,22 @@ $scope.checkoutRazor = function(){
 var options = {
     "key": "rzp_live_SshfcZZqTDMQ4f",
     //Key ID: rzp_live_SshfcZZqTDMQ4f, Key Secret: LpjvOsoRWeq79z01OJqa1pAa
-    "amount": "100", // 2000 paise = INR 20
+    "amount": $scope.payU_amount, // 2000 paise = INR 20
     "name": "Hocket Technologies Pvt. Ltd.",
     "description": "Welcome to Hocket Family.",
-    "image": "./hocketLogo.jpg",
+    "image": "./public/img/hocketLogo.jpg",
     "handler": function (response){
         alert(response.razorpay_payment_id);
     },
-    "prefill": {
-        "name": "Gaurav Kumar",
-        "email": "test@test.com"
-    },
     "notes": {
-        "address": "Hello World"
+        "email": $scope.payU_email,
+        "phone": $scope.payU_phone,
+        "productinfo": $scope.payU_productinfo,
+        "txnid": $scope.payU_txnid,
+        "userId": $scope.user.id
     },
     "theme": {
-        "color": "#F37254"
+        "color": "#1e87f0"
     }
 };
 var rzp1 = new Razorpay(options);
