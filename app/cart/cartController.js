@@ -18,7 +18,7 @@ angular.module('hocketWebsite')
 		              		
 
 		              		if(!$scope.user.loggedIn){
-		              				//$(location).attr('href', '/')
+		              				$(location).attr('href', '/')
 		              			}
 		              		else{
 					   			$scope.isCartState = true;
@@ -332,17 +332,6 @@ angular.module('hocketWebsite')
 		}
 
 
-
-
-
-
-
-
-
-
-
-
-
 $scope.checkoutRazor = function(){
 var total_Payment = $scope.payU_amount*100; 
 
@@ -354,7 +343,11 @@ var options = {
     "description": "Welcome to Hocket Family.",
     "image": "./public/img/hocketLogo.jpg",
     "handler": function (response){
-        alert(response.razorpay_payment_id);
+    	var request = "payu/success/" + $scope.user.id;
+        $http.post(request)
+		   			.then(function(res){
+		   				$(location).attr('href', '/dashboard')
+		   			}
     },
     "notes": {
         "email": $scope.payU_email,
@@ -373,28 +366,6 @@ var rzp1 = new Razorpay(options);
     e.preventDefault();
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		
 
