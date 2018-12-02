@@ -1,5 +1,5 @@
 angular.module('hocketWebsite')
-     .controller('cartController', ['$scope','$state','$http','$rootScope', function($scope, $state,$http,$rootScope){
+     .controller('cartController', ['$scope','$state','$http','$rootScope','$location', function($scope, $state,$http,$rootScope,$location){
        console.log("Cart controller is loading");
 
        $http.post('auth/user')
@@ -18,7 +18,8 @@ angular.module('hocketWebsite')
 		              		
 
 		              		if(!$scope.user.loggedIn){
-		              				$(location).attr('href', '/')
+		              				$location.path('dashboard');
+		              				//$(location).attr('href', 'allFurniture');
 		              			}
 		              		else{
 					   			$scope.isCartState = true;
@@ -346,7 +347,7 @@ var options = {
     	var request = "payu/success/" + $scope.user.id;
         $http.post(request)
 		   			.then(function(res){
-		   				$(location).attr('href', '#/dashboard')
+		   				$(location).attr('href', '/#/dashboard');
 		   			});
     },
     "notes": {
