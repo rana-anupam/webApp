@@ -344,11 +344,12 @@ angular.module('hocketWebsite')
 
 
 $scope.checkoutRazor = function(){
+var total_Payment = $scope.payU_amount*100; 
 
 var options = {
     "key": "rzp_live_SshfcZZqTDMQ4f",
     //Key ID: rzp_live_SshfcZZqTDMQ4f, Key Secret: LpjvOsoRWeq79z01OJqa1pAa
-    "amount": $scope.payU_amount, // 2000 paise = INR 20
+    "amount": total_Payment, // 2000 paise = INR 20
     "name": "Hocket Technologies Pvt. Ltd.",
     "description": "Welcome to Hocket Family.",
     "image": "./public/img/hocketLogo.jpg",
