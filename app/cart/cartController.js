@@ -18,7 +18,7 @@ angular.module('hocketWebsite')
 		              		
 
 		              		if(!$scope.user.loggedIn){
-		              				$(location).attr('href', '/')
+		              				//$(location).attr('href', '/')
 		              			}
 		              		else{
 					   			$scope.isCartState = true;
