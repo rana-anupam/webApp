@@ -18,8 +18,7 @@ angular.module('hocketWebsite')
 		              		
 
 		              		if(!$scope.user.loggedIn){
-		              				$location.path('dashboard');
-		              				//$(location).attr('href', 'allFurniture');
+		              				$(location).attr('href', 'allFurniture');
 		              			}
 		              		else{
 					   			$scope.isCartState = true;
@@ -347,7 +346,8 @@ var options = {
     	var request = "payu/success/" + $scope.user.id;
         $http.post(request)
 		   			.then(function(res){
-		   				$(location).attr('href', '/#/dashboard');
+		   				
+		              	$location.path('dashboard');
 		   			});
     },
     "notes": {
