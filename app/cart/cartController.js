@@ -346,7 +346,7 @@ var options = {
     	var request = "payu/success/" + $scope.user.id;
         $http.post(request)
 		   			.then(function(res){
-		   				$(location).attr('href', '/dashboard')
+		   				$(location).attr('href', '#/dashboard')
 		   			});
     },
     "notes": {
