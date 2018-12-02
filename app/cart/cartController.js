@@ -56,7 +56,7 @@ angular.module('hocketWebsite')
         
 
 
-        $scope.proceedButtonText = 'Proceed';
+        $scope.proceedButtonText = 'Proceed'; 
       
         $http.get('api/cart/getCart').then(function(cart){
 		   				//console.log(cart);
