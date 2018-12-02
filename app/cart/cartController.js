@@ -347,7 +347,7 @@ var options = {
         $http.post(request)
 		   			.then(function(res){
 		   				$(location).attr('href', '/dashboard')
-		   			}
+		   			});
     },
     "notes": {
         "email": $scope.payU_email,
