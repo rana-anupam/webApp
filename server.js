@@ -38,6 +38,7 @@ app.use(function(req, res, next) {
 app.use('/public', express.static(__dirname+'/public'));
 app.use('/app', express.static(__dirname+'/app'));
 app.use('/node_modules', express.static(__dirname+'/node_modules'));
+app.use('/zohoverify', express.static(__dirname+'/zohoverify'));
 
 // set view engine
 app.set('view engine', 'ejs');
