@@ -209,15 +209,15 @@ angular.module('hocketWebsite')
 					}
 				}
 
-				else if( $scope.promoCode == 'NEW25'){
+				else if( $scope.promoCode == 'DEC20'){
 					if($scope.cartSummaryRent < 500){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.500';
 						$scope.promocodeTextColor = 'red';
 					}
 					else{						
-					console.log("Apply NEW25");
-					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.25);
-					$scope.promocodeText = 'Congratulations! you have received 25% off on your monthly rent';
+					console.log("Apply DEC20");
+					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.2);
+					$scope.promocodeText = 'Congratulations! you have received 20% off on your monthly rent';
 					$scope.promocodeTextColor = 'green';
 					$scope.updateCartSummary();
 					}
