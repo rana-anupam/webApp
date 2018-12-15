@@ -21,7 +21,7 @@
 <style type="text/css">
   @font-face {
     font-family: ProximaNovaRegular;
-    src: url(public/fonts/ProximaNovaRegular.ttf);
+    src: url(../public/fonts/ProximaNovaRegular.ttf);
 }
 *{
   -webkit-user-select: none; /* Safari */        
@@ -260,7 +260,8 @@ user-select: none; /* Standard */
                       </li>
                       <li style="margin-right: 2vw;" ng-if="!user.loggedIn"><a href="#" > <button id="loginButton" ng-click="loginCoverOpen()" class="uk-button uk-button-default" >LogIn</button></a></li>
                       <li ng-if="user.loggedIn">
-                          <a href="#"> <button id="profileButton" style="padding:3px 10px;border-radius:3px" class="uk-button uk-button-default" > <img class="uk-border-circle" width="35" height="35" src={{user.thumbnail}}> &nbsp {{user.firstName}}</button> </a>
+                          <a href="#"> <button id="profileButton"  style="padding:3px 10px;border-radius:3px" class="uk-button uk-button-default" > 
+                            <img class="uk-border-circle"  width="35" height="35" ng-src="{{user.thumbnail}}"> &nbsp {{user.firstName}}</button> </a>
                           <div uk-dropdown="pos: bottom-justify" style="text-align: center;">
                               <ul class="uk-nav uk-navbar-dropdown-nav" >
 

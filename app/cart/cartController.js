@@ -223,6 +223,20 @@ angular.module('hocketWebsite')
 					}
 				}
 
+				else if( $scope.promoCode == 'NEW25'){
+					if($scope.cartSummaryRent < 100){
+						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.100';
+						$scope.promocodeTextColor = 'red';
+					}
+					else{						
+					console.log("Apply NEW25");
+					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.25);
+					$scope.promocodeText = 'Congratulations! you have received 25% off on your monthly rent';
+					$scope.promocodeTextColor = 'green';
+					$scope.updateCartSummary();
+					}
+				}
+
 				else{
 					
 					$scope.promocodeText = 'Promocode applied is either expired or invalid';
