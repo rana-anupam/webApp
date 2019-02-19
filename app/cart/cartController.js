@@ -209,13 +209,13 @@ angular.module('hocketWebsite')
 					}
 				}
 
-				else if( $scope.promoCode == 'DEC20'){
+				else if( $scope.promoCode == 'NEW20'){
 					if($scope.cartSummaryRent < 500){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.500';
 						$scope.promocodeTextColor = 'red';
 					}
 					else{						
-					console.log("Apply DEC20");
+					console.log("Apply NEW20");
 					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.2);
 					$scope.promocodeText = 'Congratulations! you have received 20% off on your monthly rent';
 					$scope.promocodeTextColor = 'green';
@@ -223,13 +223,13 @@ angular.module('hocketWebsite')
 					}
 				}
 
-				else if( $scope.promoCode == 'NEW25'){
+				else if( $scope.promoCode == 'FEB25'){
 					if($scope.cartSummaryRent < 100){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.100';
 						$scope.promocodeTextColor = 'red';
 					}
 					else{						
-					console.log("Apply NEW25");
+					console.log("Apply FEB25");
 					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.25);
 					$scope.promocodeText = 'Congratulations! you have received 25% off on your monthly rent';
 					$scope.promocodeTextColor = 'green';
