@@ -267,7 +267,7 @@
                                         </table>   
                                       <hr> -->
                             <div style="font-family: 'Muli';font-size: 1.2em;color: #2d51a3;padding: 10px">Order Summary:</div>
-                            <div ng-if="noOfOrders != 0" style="font-family: Verdana;font-size:0.8em;padding: 5px 10px;color:#424242"> You have not placed any order yet.</div>
+                            <div ng-if="noOfOrders == 0" style="font-family: Verdana;font-size:0.8em;padding: 5px 10px;color:#424242"> You have not placed any order yet.</div>
                             <div ng-repeat="order in orders">
                               <div class="uk-card uk-card-default uk-width-1-1" style="padding:15px 8px">
                                 <span style="font-size:1em;font-family:'Muli'">
