@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="hocketWebsite">
     <head>
+      <meta name="google-site-verification" content="W5T8oq8qysg-B8IerkmLLCTli4awUY6Qi6ficGP2wxE" />
         <title>Hocket</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,14 +25,14 @@
     src: url(../public/fonts/ProximaNovaRegular.ttf);
 }
 *{
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
 -moz-user-select: none; /* Firefox */
 -ms-user-select: none; /* IE10+/Edge */
 user-select: none; /* Standard */
 }
 
 body{
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
 -moz-user-select: none; /* Firefox */
 -ms-user-select: none; /* IE10+/Edge */
 user-select: none; /* Standard */
@@ -260,7 +261,7 @@ user-select: none; /* Standard */
                       </li>
                       <li style="margin-right: 2vw;" ng-if="!user.loggedIn"><a href="#" > <button id="loginButton" ng-click="loginCoverOpen()" class="uk-button uk-button-default" >LogIn</button></a></li>
                       <li ng-if="user.loggedIn">
-                          <a href="#"> <button id="profileButton"  style="padding:3px 10px;border-radius:3px" class="uk-button uk-button-default" > 
+                          <a href="#"> <button id="profileButton"  style="padding:3px 10px;border-radius:3px" class="uk-button uk-button-default" >
                             <img class="uk-border-circle"  width="35" height="35" ng-src="{{user.thumbnail}}"> &nbsp {{user.firstName}}</button> </a>
                           <div uk-dropdown="pos: bottom-justify" style="text-align: center;">
                               <ul class="uk-nav uk-navbar-dropdown-nav" >
