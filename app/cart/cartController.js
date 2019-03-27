@@ -181,6 +181,20 @@ angular.module('hocketWebsite')
 					}
 				}
 
+				else if( $scope.promoCode == 'MARCH15'){
+					if($scope.cartSummaryRent < 1000){
+						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.1000';
+						$scope.promocodeTextColor = 'red';
+					}
+					else{						
+					console.log("Apply MARCH15");
+					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.15);
+					$scope.promocodeText = 'Congratulations! you have received 15% off on your monthly rent';
+					$scope.promocodeTextColor = 'green';
+					$scope.updateCartSummary();
+					}
+				}
+
 				else if( $scope.promoCode == 'SAVE15'){
 					if($scope.cartSummaryRent < 1500){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.1500';
