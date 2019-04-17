@@ -114,6 +114,23 @@
 
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  
+  color: white;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*@media only screen and (min-width: 600px) {
     .example {background: green;}
@@ -133,53 +150,24 @@
               <tr style="width:100%">
                 <td style="padding: 20px 30px;border-bottom:1px solid #eee;font-size:1.5em;font-weight:bold">My Dashboard</td>
               </tr>
-              <tr style="width:100%">
-               <td style="padding: 20px 35px;border-bottom:1px solid #eee;border-left:4px solid #2d51a3;font-size:1.05em"><span uk-icon="icon: cart; ratio: 1.2"></span> &nbsp &nbsp My Orders</td>
+              <tr style="width:100%" ng-click="changeTab('tab_myOrders')">
+               <td id="tab_myOrders" style="padding: 20px 35px;border-bottom:1px solid #eee;border-left:4px solid #2d51a3;font-size:1.05em"><span uk-icon="icon: cart; ratio: 1.2"></span> &nbsp &nbsp My Orders</td>
               </tr>
-              <tr style="width:100%">
+              <tr ng-if="false" style="width:100%">
                 <td style="padding: 20px 35px;border-bottom:1px solid #eee;font-size:1.05em"><span uk-icon="icon: info; ratio: 1.2"></span> &nbsp &nbsp KYC Upload</td>
               </tr>
-              <tr style="width:100%">
-                <td style="padding: 20px 35px;border-bottom:1px solid #eee;font-size:1.05em"><span uk-icon="icon: credit-card; ratio: 1.2"></span> &nbsp &nbsp Payments</td>
+              <tr style="width:100%" ng-click="changeTab('tab_payments')">
+                <td id="tab_payments" style="padding: 20px 35px;border-bottom:1px solid #eee;font-size:1.05em"><span uk-icon="icon: credit-card; ratio: 1.2"></span> &nbsp &nbsp Payments</td>
               </tr>
-              <tr style="width:100%">
+              <tr ng-if="false" style="width:100%">
                 <td style="padding: 20px 35px;border-bottom:0px solid #eee;font-size:1.05em"><span uk-icon="icon: users; ratio: 1.2"></span> &nbsp &nbsp Refer and Earn</td>
               </tr>
             </table>
           </div>
       </div>
-      <div class="uk-width-3-4@s uk-width-1-1">
-<!--             <div class="uk-margin" style="text-align:left">
-                  <table style="border:0px solid red;width: 100%">
-                    <tr style="border:0px solid red;font-family: 'Montserrat';">
-                      <td style="border:0px solid red;width: 30%">
-                        <div class="uk-card uk-card-default" style="padding:35px 25px;background-color:#5bcded;color:#fff;border:0px solid red;border-radius:10px;height:160px">
-                            <span style="font-size:1.1em"> Rent</span><br>
-                            <span style="font-size:3.3em;">Rs 1800</span> 
-                        </div>
-                      </td>
-                      <td style="border:0px solid red;width: 5%;text-align: center;font-size:2em">
-                        +
-                      </td>
-                      <td style="border:0px solid red;width: 30%">
-                        <div class="uk-card uk-card-default" style="padding:35px 25px;background-color:#f09e63;color:#fff;border:0px solid red;border-radius:10px;height:160px">
-                            <span style="font-size:1.1em"> Fine Charges</span><br>
-                            <span style="font-size:3.3em">Rs 20</span> 
-                        </div>
-                      </td>
-                      <td style="border:0px solid red;width: 5%;text-align: center;font-size:2em">
-                        =
-                      </td>
-                      <td style="border:0px solid red;width: 30%">
-                        <div class="uk-card uk-card-default" style="padding:35px 25px;background-color:#6fc98f;color:#fff;border:0px solid red;border-radius:10px;height:160px">
-                            <span style="font-size:1.1em"> Total Pending Amount</span><br>
-                            <span style="font-size:3.3em">Rs 1820</span> 
-                        </div>
-                      </td>
-                    </tr>
-                  </table> 
-            </div> 
-            <hr>-->
+<!-- Order Summary tab starts -->
+      <div class="uk-width-3-4@s uk-width-1-1" ng-if="show_desktop_orderSummaryTab">
+
           <div style="font-family: Verdana;font-size:1.6em;padding: 15px 0px;color:#2d51a3"> Order Summary:</div>
           <div ng-if="noOfOrders == 0" style="font-family: Verdana;font-size:1em;padding: 15px 0px;color:#424242"> You have not placed any order yet.</div>
           <div ng-repeat="order in orders">
@@ -200,7 +188,10 @@
                       <span>Quantity: <b>{{product.quantity}} unit</b></span><br>
                       <span ng-if="!product.addon">Package: <b>{{product.package}}</b><br></span>
                       <span ng-if="product.addon">Type: <b>Addon</b><br></span>
-                      <span ng-if="!product.addon">Items Included: <b>{{product.itemsIncluded}}</b><br></span>
+                      
+                      <span ng-if="!product.addon">Items Included: <b>
+                      <span ng-if="product.itemsIncluded.core">Core: {{product.itemsIncluded.core}} items</span>
+                      <span ng-if="product.itemsIncluded.addon">|| Addon: {{product.itemsIncluded.addon}} items</span></b></span><br>
                       <span ng-if="!product.addon">Tenure: <b>{{product.tenure}} months</b><br></span>
                       <span>Deposit: <b>Rs. {{product.deposit}}</b></span> 
                       <span style="color:#1e87f0;font-size:0.9em">(Fully Refundable)<br></span>
@@ -220,6 +211,68 @@
       </div> <!-- ng-repeat = orders -->
 
       </div>
+<!-- Order Summary tab ends -->
+<!-- Payments Tab starts -->
+
+      <div class="uk-width-3-4@s uk-width-1-1" ng-if="show_desktop_paymentsTab">
+
+          <div style="font-family: Verdana;font-size:1.6em;padding: 15px 0px;color:#2d51a3"> Payments:</div>
+          <div ng-if="noOfPayments == 0" style="font-family: Verdana;font-size:1em;padding: 15px 0px;color:#424242"> You have do not have any due payments.</div>
+            <div class="uk-child-width-1-1 uk-margin" style="width:100%" ng-repeat="payment in payments | orderBy : sortBy">
+
+                  <div class="uk-card uk-card-default uk-card-body" >
+                    <table style="width:100%;">
+                      <tr>
+                        <td>
+                          <span style="font-size:1.3em;color:#0d47a1"><b>Transaction Id:</b></span> {{payment.transactionId}} &nbsp 
+                          <span class="uk-label uk-label-danger" ng-if="payment.status == 'pending'">{{payment.status}}</span> 
+                          <span class="uk-label uk-label-success" ng-if="payment.status == 'paid'">{{payment.status}}</span> 
+                          <span class="uk-label uk-button-default" ng-if="payment.areOrdersClubbed" uk-tooltip="title: Clubbed Payment means it's consolidated payment for your multiple orders.; pos: bottom">Clubbed Payment</span>
+                        </td>
+                        <td style="text-align: right;">
+                          <span style="align-content: right"><b>Issued on:</b> {{payment.issue_dateTime}}</span>
+                        </td>                         
+                      </tr>
+                    </table>
+
+                    <br/>
+                    <br/>
+
+                    <table>
+                      <tr style="background: linear-gradient(to bottom right, #2d51a3, #1e87f0);">
+                        <th>Order No.</th>
+                        <th>Tenure</th>
+                        <th>Rent</th>
+                      </tr>
+                      <tr ng-repeat="order in payment.paymentForOrders">
+                        <td>{{order}}</td>
+                        <td>{{payment.startDate[order] | date:'medium' | limitTo: 12}} to {{payment.endDate[order] | date:'medium' | limitTo: 12}}</td>
+                        <td>Rs. {{payment.singleOrderAmount[order]}}</td>
+                      </tr>
+                      <tr >
+                        <td style="text-align: right" colspan="2"><b>Total</b></td>
+                        <td>Rs. {{payment.payment_amount}}</td>
+                      </tr>
+                    </table>
+                    <div style="margin-top: 5px;" ng-if="payment.desription">
+                      <b>Description:</b> {{payment.desription}}
+                    </div>
+
+                    <div style="width: 100%; border:0px solid red;text-align: right;margin-top:30px;">
+                         <button ng-if="payment.status == 'pending'" class="uk-button uk-button-primary" ng-click="checkoutRazor(payment)">Pay Rs. {{payment.payment_amount}} </button>
+                         <button ng-if="payment.status == 'paid'" class="uk-button uk-button-secondary">Settled</button>
+                    </div>
+                  </div>
+            </div>
+      </div>
+
+<!-- Payments Tab ends -->
+
+
+
+
+
+
   </div>
 </div>
 
@@ -227,45 +280,17 @@
 <div class="uk-margin mobile_dashboard_view">
               <ul uk-tab style="">
                   <li><a href="#" style="font-size:0.9em;">Orders</a></li>
-                  <li><a href="#" style="font-size:0.9em;">KYC</a></li>
+                  <!-- <li><a href="#" style="font-size:0.9em;">KYC</a></li> -->
                   <li><a href="#" style="font-size:0.9em;">Payments</a></li>
-                  <li><a href="#" style="font-size:0.9em;">Refer</a></li>
+                  <!-- <li><a href="#" style="font-size:0.9em;">Refer</a></li> -->
               </ul>
 
               <ul class="uk-switcher uk-margin">
                   <li>
-                    <div class="uk-container uk-margin">
+                    <div class="uk-container uk-margin" >
                         <div uk-grid>
                           <div class="uk-width-1-1">
-<!--                                         <table style="border:0px solid red;width: 100%">
-                                          <tr style="border:0px solid red;font-family: 'Montserrat';text-align: left">
-                                            <td style="border:0px solid red;width: 32%">
-                                              <div class="uk-card uk-card-default" style="padding:7px 5px;background-color:#5bcded;color:#fff;border:0px solid red;border-radius:7px;">
-                                                  <span style="font-size:0.55em"> Rent</span><br>
-                                                  <span style="font-size:1.35em;">Rs 1800</span> 
-                                              </div>
-                                            </td>
-                                            <td style="border:0px solid red;width: 2%;font-size:0.9em">
-                                              +
-                                            </td>
-                                            <td style="border:0px solid red;width: 32%">
-                                              <div class="uk-card uk-card-default" style="padding:7px 5px;background-color:#f09e63;color:#fff;border:0px solid red;border-radius:7px;">
-                                                  <span style="font-size:0.55em"> Fine Charges</span><br>
-                                                  <span style="font-size:1.35em">Rs 20</span> 
-                                              </div>
-                                            </td>
-                                            <td style="border:0px solid red;width: 2%;text-align: center;font-size:0.9em">
-                                              =
-                                            </td>
-                                            <td style="border:0px solid red;width: 32%">
-                                              <div class="uk-card uk-card-default" style="padding:7px 5px;background-color:#6fc98f;color:#fff;border:0px solid red;border-radius:7px;">
-                                                  <span style="font-size:0.45em;"> Total Pending Amount</span><br>
-                                                  <span style="font-size:1.35em;">Rs 1820</span> 
-                                              </div>
-                                            </td>
-                                          </tr>
-                                        </table>   
-                                      <hr> -->
+
                             <div style="font-family: 'Muli';font-size: 1.2em;color: #2d51a3;padding: 10px">Order Summary:</div>
                             <div ng-if="noOfOrders == 0" style="font-family: Verdana;font-size:0.8em;padding: 5px 10px;color:#424242"> You have not placed any order yet.</div>
                             <div ng-repeat="order in orders">
@@ -325,9 +350,62 @@
                         </div> 
                       </div>
                   </li>
-                  <li>Upload your documents here.</li>
-                  <li>Make payments here.</li>
-                  <li>Refer and Earn.</li>
+                  <!-- <li>Upload your documents here.</li> -->
+<!-- Payment Starts -->
+                  <li>
+                          <div class="uk-width-1-1" >
+
+                            <div style="font-family: Verdana;font-size:1.6em;padding: 15px;color:#2d51a3"> Payments:</div>
+                            <div ng-if="noOfPayments == 0" style="font-family: Verdana;font-size:1em;padding: 15px 0px;color:#424242"> You have do not have any due payments.</div>
+                              <div class="uk-child-width-1-1 uk-margin" style="width:100%" ng-repeat="payment in payments | orderBy : sortBy">
+
+                                    <div class="uk-card uk-card-default uk-card-body" >
+                                      <table style="width:100%;">
+                                        <tr>
+                                          <td>
+                                            <span style="font-size:1.3em;color:#0d47a1"><b>Transaction Id:</b></span> {{payment.transactionId}} &nbsp 
+                                            <span class="uk-label uk-label-danger" ng-if="payment.status == 'pending'">{{payment.status}}</span> 
+                                            <span class="uk-label uk-label-success" ng-if="payment.status == 'paid'">{{payment.status}}</span> 
+                                            <span class="uk-label uk-button-default" ng-if="payment.areOrdersClubbed" uk-tooltip="title: Clubbed Payment means it's consolidated payment for your multiple orders.; pos: bottom">Clubbed Payment</span>
+                                          </td>
+                                        </tr>
+                                        <tr style="background: white">
+                                          <td >
+                                            <span style="align-content: right"><b>Issued on:</b> {{payment.issue_dateTime}}</span>
+                                          </td>                         
+                                        </tr>
+                                      </table>
+
+                                      <table>
+                                        <tr style="background: linear-gradient(to bottom right, #2d51a3, #1e87f0);">
+                                          <th style="text-align: center;">Order No.</th>
+                                          <th style="text-align: center;">Tenure</th>
+                                          <th style="text-align: center;">Rent</th>
+                                        </tr>
+                                        <tr ng-repeat="order in payment.paymentForOrders" >
+                                          <td style="text-align: center;">{{order}}</td>
+                                          <td style="text-align: center;">{{payment.startDate[order] | date:'medium' | limitTo: 12}} <br> to <br>{{payment.endDate[order] | date:'medium' | limitTo: 12}}</td>
+                                          <td>Rs. {{payment.singleOrderAmount[order]}}</td>
+                                        </tr>
+                                        <tr >
+                                          <td style="text-align: right" colspan="2"><b>Total</b></td>
+                                          <td>Rs. {{payment.payment_amount}}</td>
+                                        </tr>
+                                      </table>
+                                      <div style="margin-top: 5px;" ng-if="payment.desription">
+                                        <b>Description:</b> {{payment.desription}}
+                                      </div>
+
+                                      <div style="width: 100%; border:0px solid red;text-align: right;margin-top:30px;">
+                                           <button ng-if="payment.status == 'pending'" class="uk-button uk-button-primary" ng-click="checkoutRazor(payment)">Pay Rs. {{payment.payment_amount}} </button>
+                                           <button ng-if="payment.status == 'paid'" class="uk-button uk-button-secondary">Settled</button>
+                                      </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </li>
+<!-- Payment Ends -->
+                  <!-- <li>Refer and Earn.</li> -->
               </ul>
 </div>
 

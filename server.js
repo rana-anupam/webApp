@@ -8,6 +8,11 @@ var path = require('path');
 var multipart = require('connect-multiparty');
 var sha512 = require('js-sha512');
 const CircularJSON = require('circular-json');
+const nodemailer = require("nodemailer");
+const ejs = require('ejs');
+const fs = require('fs');
+
+
 var multipartMiddelware = multipart();
 
 const authRoutes = require('./routes/auth-routes');
@@ -22,7 +27,7 @@ const Message = require('./models/message-model');
 
 const keys = require('./config/keys');
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 const app = express();
 
 app.use(bodyParser.json());
@@ -126,6 +131,7 @@ app.post('/api/contact/message', (req, res) => {
   message.save();
   res.status(200).send('OK');
 });
+
 
 app.listen(port, () => {
     console.log('Server is running on port', port);

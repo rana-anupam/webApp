@@ -13,7 +13,8 @@ const userSchema = new Schema({
     platform: String,
     tempOrder:[],
     cart: [],
-    orders: []
+    orders: [],
+    rentalPayments:[]
 }, { usePushEach: true });
 
 const User = mongoose.model('user', userSchema);

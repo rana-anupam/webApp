@@ -41,7 +41,7 @@ router.get('/facebook/callback',
 router.post('/user', (req, res) => {
   //console.log(req.user);
   if(req.user){
-    res.json({id:req.user._id,email:req.user.email,loggedIn:true,firstName:req.user.firstName,lastName:req.user.lastName,thumbnail:req.user.thumbnail});
+    res.json({id:req.user._id,email:req.user.email,loggedIn:true,firstName:req.user.firstName,lastName:req.user.lastName,thumbnail:req.user.thumbnail,socialId:req.user.socialId});
   }
   else{
     res.json({loggedIn:false});

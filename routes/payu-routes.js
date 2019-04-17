@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const User = require('../models/user-model');
 const OrderHistory = require('../models/orderHistory-model');
+const RentalPayment = require('../models/rentalPayments-model');
 // const OrderNo = require('../models/orderNo-model');
+
+const nodemailer = require("nodemailer");
+const ejs = require('ejs');
+const fs = require('fs');
 var sha512 = require('js-sha512');
 var moment = require('moment');
 
@@ -27,11 +32,11 @@ router.post('/success/:id',function(req,res){
 		//console.log(user);
 		var time = moment().format('MMMM Do YYYY, h:mm:ss a');
     var orderNo = 0;
+
     OrderHistory.find().exec(function (err, results) {
       orderNo = 18000 + results.length + 1;
       console.log("Order No: ", orderNo);
 
-    }).then(function(){
 
             var orderContent = {
               orderNo: orderNo,
@@ -56,12 +61,80 @@ router.post('/success/:id',function(req,res){
                                     }
                                 });
                         });
+
+                                    // Email Sending Code .................................................................
+
+                        const key = require('../key.json');
+                        // Change this to one of your email addresses in the organisation
+                        const YOUR_EMAIL_ADDRESS = 'order@thehocket.com';
+                        // Change this to the receiver to the mail
+                        const SEND_TO = user.email;
+
+                          console.log("Reached the start function");
+                          const transporter = nodemailer.createTransport({
+                            host: 'smtp.gmail.com',
+                            port: 465,
+                            secure: true,
+                            auth: {
+                              type: 'OAuth2',
+                              user: YOUR_EMAIL_ADDRESS,
+                              serviceClient: key.client_id,
+                              privateKey: key.private_key
+                            },
+                          });
+
+                        //console.log("Loading ejs now");
+                        var cName = 'Subham'
+                        ejs.renderFile(__dirname + "/../orderConfirmationMail.ejs", { customerName: user.firstName }, function (err, data) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            var mainOptions = {
+                                from: '"Hocket Rentals" <order@thehocket.com>',
+                                to: SEND_TO,
+                                subject: 'Order Confirmation',
+                                html: data
+                            };
+                            //console.log("html data ======================>", mainOptions.html);
+                            transporter.sendMail(mainOptions, function (err, info) {
+                                if (err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('Message sent: ' + info.response);
+                                }
+                            });
+                        }
+
+                        });
+
+                        //..........................................................................................
             console.log("Successfully placed order");
+
+
     });
 		
 	});
     
 });
+
+// Rental Payment Routes
+router.post('/rentalPayments/success/:trxId',function(req,res){
+  console.log('--------Payment Success--------');
+  console.log('--------CONSOLE LOGGING The data passed in URL--------');
+  console.log(req.params.trxId);
+  //console.log(req.body);
+  // var updateObj = {$set: {}}
+  // updateObj['$set'][status] = "paid";
+
+  RentalPayment.update({transactionId: req.params.trxId}, {$set: { status: 'paid' }}).then((payment) => {
+            //console.log("The update payment is:");
+            //console.log(payment);
+            res.send("OK");
+        });
+
+    
+});
+
 
 router.post('/fail',function(req,res){
   console.log('--------Payment Failed--------');

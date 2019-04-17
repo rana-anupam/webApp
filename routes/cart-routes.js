@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/user-model');
+const RentalPayment = require('../models/rentalPayments-model');
 
 const authCheck = (req, res, next) => {
     if(!req.user){
@@ -78,6 +79,18 @@ router.get('/getOrders', authCheck, (req, res) => {
 		//console.log(user);
 		res.json(user.orders);
 	});
+});
+
+//Send all the payments to dashboard
+router.get('/getPayments/:socialId', authCheck, (req, res) => {
+	//console.log(req.body);
+	//Saving the payment in user collection
+                     RentalPayment.find({socialId:req.params.socialId}).then((payments) => {
+
+                      //console.log(payments);
+                      res.send(payments);
+
+                     });
 });
 
 

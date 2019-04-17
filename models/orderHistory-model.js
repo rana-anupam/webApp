@@ -6,6 +6,7 @@ const orderHistory = new Schema({
     orderTime: String,
     orderSummary : [],
     paymentSummary : [],
+    rentalPayments : [],
     status: String
 });
 

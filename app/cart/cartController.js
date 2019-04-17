@@ -167,6 +167,20 @@ angular.module('hocketWebsite')
 						}
 				}
 
+				else if( $scope.promoCode == 'SHAMVIL20'){
+					if($scope.cartSummaryRent < 500){
+						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.500';
+						$scope.promocodeTextColor = 'red';
+					}
+					else{						
+					console.log("Apply SHAMVIL20");
+					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.2);
+					$scope.promocodeText = 'Congratulations! you have received 20% off on your monthly rent';
+					$scope.promocodeTextColor = 'green';
+					$scope.updateCartSummary();
+					}
+				}
+
 				else if( $scope.promoCode == 'SAVE10'){
 					if($scope.cartSummaryRent < 1000){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.1000';
@@ -294,11 +308,19 @@ angular.module('hocketWebsite')
 			//console.log("I am clicked");
 			if($scope.isCartState){
 
-				$scope.isCartState = false;
-				$scope.isAddressState = true;
-				$('.cartHead').removeClass("cart_heading_active");
-				$('.addressHead').addClass("cart_heading_active");
-				$(window).scrollTop(-100);
+				if($scope.cartSummaryTotalPayable == 0){
+					UIkit.notification('<div style="font-weight:normal;font-size:0.8em;text-align:center;font-family:Verdana;color:#f44336;border:1px solid #f44336;padding:5px;">Please add products into the cart to proceed.</div>', {status:'danger',pos: 'bottom-right'});
+
+				}
+				else{
+					$scope.isCartState = false;
+					$scope.isAddressState = true;
+					$('.cartHead').removeClass("cart_heading_active");
+					$('.addressHead').addClass("cart_heading_active");
+					$(window).scrollTop(-100);
+				}
+
+				
 			}
 			else if($scope.isAddressState){
 
