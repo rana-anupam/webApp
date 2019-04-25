@@ -27,7 +27,7 @@ const Message = require('./models/message-model');
 
 const keys = require('./config/keys');
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 const app = express();
 
 app.use(bodyParser.json());

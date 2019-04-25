@@ -167,6 +167,22 @@ angular.module('hocketWebsite')
 						}
 				}
 
+
+
+				else if( $scope.promoCode == 'DEBBY15'){
+					if($scope.cartSummaryRent < 1000){
+						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.1000';
+						$scope.promocodeTextColor = 'red';
+					}
+					else{						
+					console.log("Apply DEBBY15");
+					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.15);
+					$scope.promocodeText = 'Congratulations! you have received 15% off on your monthly rent';
+					$scope.promocodeTextColor = 'green';
+					$scope.updateCartSummary();
+					}
+				}
+
 				else if( $scope.promoCode == 'SHAMVIL20'){
 					if($scope.cartSummaryRent < 500){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.500';

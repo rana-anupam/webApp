@@ -62,7 +62,7 @@ router.post('/success/:id',function(req,res){
                                 });
                         });
 
-                                    // Email Sending Code .................................................................
+                        // Email Sending Code .................................................................
 
                         const key = require('../key.json');
                         // Change this to one of your email addresses in the organisation
@@ -85,7 +85,7 @@ router.post('/success/:id',function(req,res){
 
                         //console.log("Loading ejs now");
                         var cName = 'Subham'
-                        ejs.renderFile(__dirname + "/../orderConfirmationMail.ejs", { customerName: user.firstName }, function (err, data) {
+                        ejs.renderFile(__dirname + "/../emailSnippets/orderConfirmationMail.ejs", { customerName: user.firstName }, function (err, data) {
                         if (err) {
                             console.log(err);
                         } else {

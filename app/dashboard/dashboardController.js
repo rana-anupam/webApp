@@ -13,10 +13,10 @@ angular.module('hocketWebsite')
 		              		else{
 		              				console.log("Welcome to the Dashboard");
 		              				$http.get('api/cart/getOrders').then(function(orders){
-										   				//console.log(cart);
+										   				console.log("Printing Orders:");
 										   				$scope.orders = orders.data;
 										   				$scope.noOfOrders = orders.data.length;
-										   				//console.log($scope.orders);
+										   				console.log($scope.orders);
 										   				//console.log("No. of Orders are", $scope.noOfOrders);
 
 
