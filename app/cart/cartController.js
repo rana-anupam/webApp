@@ -169,13 +169,13 @@ angular.module('hocketWebsite')
 
 
 
-				else if( $scope.promoCode == 'VIBHU10'){
+				else if( $scope.promoCode == 'RAGHU10'){
 					if($scope.cartSummaryRent < 500){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.500';
 						$scope.promocodeTextColor = 'red';
 					}
 					else{						
-					console.log("Apply VIBHU10");
+					console.log("Apply RAGHU10");
 					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.1);
 					$scope.promocodeText = 'Congratulations! you have received 15% off on your monthly rent';
 					$scope.promocodeTextColor = 'green';
