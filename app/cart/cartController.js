@@ -197,13 +197,13 @@ angular.module('hocketWebsite')
 					}
 				}
 
-				else if( $scope.promoCode == 'BARSILONA20'){
+				else if( $scope.promoCode == 'MITHUN20'){
 					if($scope.cartSummaryRent < 500){
 						$scope.promocodeText = 'To apply this code minimum monthly rent should be Rs.500';
 						$scope.promocodeTextColor = 'red';
 					}
 					else{						
-					console.log("Apply BARSILONA20");
+					console.log("Apply MITHUN20");
 					$scope.cartSummaryDiscount = Math.ceil($scope.cartSummaryRent * 0.2);
 					$scope.promocodeText = 'Congratulations! you have received 20% off on your monthly rent';
 					$scope.promocodeTextColor = 'green';
