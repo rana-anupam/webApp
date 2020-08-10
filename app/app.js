@@ -82,11 +82,13 @@ var app =  angular.module('hocketWebsite', ['ui.router', 'ngFileUpload','ngRoute
 		   				templateUrl : "app/cart/cart.html",
 							controller : "cartController"
 		   			})
-						.state('dashboard',{
-		   				url : "/dashboard",
-		   				templateUrl : "app/dashboard/dashboard.html",
-							controller : "dashboardController"
+						
+						.state('shop',{
+		   				url : "/shop",
+		   				templateUrl : "app/shop/shop.html",
+							controller : "shopController"
 		   			})
+
 						.state('offers_tnc',{
 		   				url : "/offers_tnc",
 		   				templateUrl : "app/offers_tnc/offers_tnc.html",
